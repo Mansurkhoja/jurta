@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Helvetica';
+    font-weight: 500;
+    font-style: normal;
+    font-display: fallback;
+    src: local("HelveticaMedium"), url(../fonts/HelveticaMedium.woff2) format("woff2"), url(../fonts/HelveticaMedium.woff) format("woff"), url(../fonts/HelveticaMedium.ttf) format("truetype"), url(../fonts/HelveticaMedium.eot), url(../fonts/HelveticaMedium.eot?#iefix) format("embedded-opentype")
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;
+    src: local("Montserrat-Bold"), url(../fonts/Montserrat-Bold.woff2) format("woff2"), url(../fonts/Montserrat-Bold.woff) format("woff"), url(../fonts/Montserrat-Bold.ttf) format("truetype"), url(../fonts/Montserrat-Bold.eot), url(../fonts/Montserrat-Bold.eot?#iefix) format("embedded-opentype")
+}
