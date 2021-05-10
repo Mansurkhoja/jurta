@@ -1,0 +1,170 @@
+@media screen and (max-width: 576px) {
+    .navbar__logo {
+        max-width: 107px;
+    }
+    .navbar__filter {
+        font-size: 18px;
+        .icon {
+            font-size: 22px;
+        }
+    }
+    //main
+    .main-container {
+        height: calc(100vh - 55px);
+        height: calc((var(--vh, 1vh) * 100) - 55px);
+    }
+    .video-text {
+        left: 10px;
+        bottom: 10px;
+    }
+    .video-name {
+        font-size: $font-normal;
+        max-height: 46px;
+    }
+    .video-descr,
+    .video-place {
+        font-size: 16px;
+        max-height: 36px;
+    }
+    .video-action {
+        right: 10px;
+    }
+    .video-more,.video-profile  {
+        right: 5px;}
+    //footer
+    .footer {
+        height: 55px;
+    }
+    .footer__link {
+        font-size: 12px;
+        .icon {
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    //header
+    .navbar__filter {
+        font-size: 16px;
+        .icon {
+            font-size: 20px;
+        }
+    }
+    //main
+    .main-container {
+        height: calc(100vh - 41px);
+        height: calc((var(--vh, 1vh) * 100) - 41px);
+    }
+    .video-name {
+        font-size: 16px;
+        max-height: 40px;
+    }
+    .video-text__item + .video-text__item {
+        margin-top: 6px;
+    }
+    .video-text .btn {
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+    .video-descr,
+    .video-place {
+        font-size: 12px;
+        max-height: 32px;
+    }
+    .video-action {
+      //  right: 10px;
+        width: 30px;
+        height: 30px;
+        bottom: 5px;
+    }
+    .video-more {
+       // right: 5px;
+        width: auto;
+        height: auto;
+    }
+    .video-more__link.btn {
+        font-size: 14px;
+        padding: 3px 12px 2px;
+    }
+    .btn--action {
+        font-size: 30px;
+    }
+    .video-share {
+        bottom: 50px;
+    }
+
+    .video-comment {
+        bottom: 96px;
+    }
+
+    .video-like {
+        bottom: 142px;
+    }
+
+    .video-call {
+        bottom: 188px;
+    }
+
+    .video-profile {
+        bottom: 230px;
+        //right: 5px;
+        width: 45px;
+        height: 45px;
+    }
+    //footer
+    .footer {
+        height: 41px;
+    }
+    .footer__link {
+        padding: 6px 0 2px;
+        font-size: 10px;
+        .icon {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+    }
+    .footer__item--add .footer__link img {
+        width: 40px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .video-place{
+        margin-right: 30px;
+    }
+}
+@media screen and (max-height: 560px) {
+    .sign-in-modal__inner {
+        padding: 1px 40px;
+    }
+    .sign-in-sub-title {
+        margin: 8px 0 10px;
+    }
+    .mtr-datepicker .mtr-input-slider {
+        margin: 0px 6px;
+    }
+    .datepicker-controls .button.view-switch {
+        height: 1.75em;
+    }
+    .datepicker-cell,
+    .datepicker-view .week {
+        height: 1.75rem;
+        line-height: 1.75rem;
+    }
+    .datepicker-view.datepicker-grid .datepicker-cell {
+        height: 4rem;
+        line-height: 4rem;
+    }
+    .btn--text {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
+    .orientation.changed {
+        display: block;
+    }
+}
+@media (hover: none) {
+    .mtr-input {
+        display: none !important;
+    }
+}

@@ -1,0 +1,44 @@
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    min-width: 280px;
+    
+}
+.navbar {
+    max-width: 720px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 5px;
+    user-select: none;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0, rgba(0, 0, 0, 0) 100%);
+    &__logo {
+        display: inline-block;
+        white-space: nowrap;
+        max-width: 165px;
+        
+    }
+}
+.navbar__logo img {
+    //width: 165px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.navbar__filter{
+    color: $white;
+    font-weight: $font-bold;
+    font-size: $font-normal;
+    margin-right: 15px;
+    .icon{
+        transform-origin: center;
+        font-size: 24px;
+    }
+    &:hover,&.active{
+        color: $orange;
+    }
+}

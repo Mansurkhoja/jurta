@@ -1,0 +1,60 @@
+.fade {
+    display: none;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    z-index: 8;
+    &.active {
+        visibility: visible;
+        display: block;
+    }
+}
+.modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    top: 0;
+    z-index: 9;
+    visibility: hidden;
+    overflow: hidden;
+    display: none;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    &.active {
+        visibility: visible;
+        display: block;
+    }
+    &.right {
+        .modal__content {
+            max-width: 500px;
+            margin-left: auto;
+          
+            
+            width: calc(100% - 40px);
+        }
+    }
+}
+.modal__content{
+      padding-left: 15px;
+            padding-right: 15px;height: 100%;
+            background-color: $base-light;
+}
+.modal__inner {
+    max-width: 720px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@keyframes rightShow {
+    0% {
+        transform: translate(100%);
+    }
+    100% {
+        transform: translate(0);
+    }
+}

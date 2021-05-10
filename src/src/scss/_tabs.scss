@@ -1,0 +1,47 @@
+.tab-nav {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    margin: 0 -15px;
+    position: relative;
+    span {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 50%;
+        height: 2px;
+        background-color: $orange;
+        transition: transform 0.19s ease-in;
+        transform: translateX(0);
+    }
+}
+.tab-link {
+    line-height: 50px;
+    max-width: 50%;
+    flex: 0 0 50%;
+    text-align: center;
+    color: $menu-color;
+    font-size: 18px;
+    font-weight: $font-medium;
+    border-bottom: 2px solid $menu-color;
+    transition: color 0.19s ease-out;
+    &.active {
+        color: $orange;
+    }
+    &:nth-child(2).active {
+        ~ span {
+            transform: translateX(100%);
+        }
+    }
+}
+.tab-content {
+    [data-tab-content] {
+        display: none;
+        &.active {
+            &.objects {
+                display: flex;
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+//loader
+.loader-container {
+    width: 100%;
+    height: 100vh;
+    height: $fullHeight;
+    min-height: $minHeight;
+    background-color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    touch-action: none;
+}
+.loader-hi {
+    margin: 0;
+    color: $base-light;
+    font-size: 55px;
+    font-weight: $font-bold;
+    animation: hianimate 0.4s linear forwards infinite;
+}
+@keyframes hianimate {
+    0% {
+        text-shadow: -1.5px -1.5px 0 #0ff, 1.5px 1.5px 0 #f00;
+    }
+    25% {
+        text-shadow: 1.5px 1.5px 0 #0ff, -1.5px -1.5px 0 #f00;
+    }
+    50% {
+        text-shadow: 1.5px -1.5px 0 #0ff, -1.5px 1.5px 0 #f00;
+    }
+    75% {
+        text-shadow: -1.5px 1.5px 0 #0ff, 1.5px -1.5px 0 #f00;
+    }
+}
+.btn--loader{
+    color: #ffffff;
+    margin-top: 20px;
+    transform: translateY(20px);
+    opacity: 0;
+    visibility: hidden;
+    border: 2px solid #212529;
+    letter-spacing: .5px;
+    animation: loadercloseanimate .1s ease .0s 1 both;
+    &:hover{
+        background-color: #212529;
+    }
+}
+@keyframes loadercloseanimate {
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+    }
+}
+.orientation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 9999;
+    text-align: center;
+}

@@ -1,0 +1,65 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    padding: 11px 15px;
+    cursor: pointer;
+    color: $base-light;
+    background-color: transparent;
+    border: none;
+    border-radius: $base-radius;
+    font-weight: $font-roman;
+    font-size: 25px;
+    line-height: 1.15;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    transition: all 0.19s ease-out;
+    user-select: none;
+    &:hover,
+    &:focus,
+    &:active {
+        outline: none;
+    }
+    &--out {
+        border: 2px solid $dark-blue;
+        color: $dark-blue;
+    }
+    &--link {
+        border-radius: 25px;
+        padding: 7px 14px;
+    }
+    &--dark {
+        background-color: $dark-blue;
+    }
+    &--primary {
+        background-color: $orange;
+        text-transform: uppercase;
+    }
+    &--play {
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 35px;
+        display: inline-block;
+        .icon--play {
+            transform: scale(0);
+        }
+        &.play {
+            .icon--play {
+                transition: transform 0.19s ease-in;
+                transform: scale(1.2);
+                transform-origin: center;
+            }
+        }
+    }
+    &--action {
+        font-size: 36px;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        padding: 0;
+    }
+}

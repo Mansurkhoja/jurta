@@ -1,0 +1,26 @@
+//colors
+$pink: #fe2c55;
+$orange: #ff9929;
+$black: #000009;
+$white: #ffffff;
+$base-light: $white;
+$text-color: #333333;
+$dark-blue: #131e34;
+$menu-color:#4b4b4b;
+//fonts
+$font-family-base: "HelveticaNeueCyr", "Montserrat", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+//font-size
+$font-small: 18px;
+$font-normal: 20px;
+$font-big: 24px;
+//font-weight
+$font-roman: 400;
+$font-medium: 550;
+$font-bold: 700;
+//height
+$fullHeight: calc(var(--vh, 1vh) * 100);
+$fullHeightFooter: calc((var(--vh, 1vh) * 100) - 65px);
+$minHeight: 450px;
+//border
+$base-radius: 10px;

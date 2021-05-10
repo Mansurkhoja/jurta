@@ -1,0 +1,131 @@
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+body {
+    margin: 0;
+    font-family: $font-family-base;
+    font-weight: $font-roman;
+    font-size: $font-normal;
+    color: $base-light;
+    background-color: $black;
+    backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+    overflow: hidden;
+}
+::selection {
+    background: $pink;
+    color: $base-light;
+}
+::-moz-selection {
+    background: $pink;
+    color: $base-light;
+}
+::-webkit-scrollbar {
+    width: 0 !important;
+    background: transparent;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+img,
+svg {
+    vertical-align: middle;
+    border: none;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+button,
+input {
+    overflow: visible;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    font-size: inherit;
+    // box-shadow: 0 0 0 40px #ffffff inset;
+    transition: color 25000s ease-in-out 0s, background-color 25000s ease-in-out 0s;
+}
+button,
+select {
+    text-transform: none;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+p {
+    margin: 0;
+}
+// base class
+
+.icon {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: middle;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    font-size: inherit;
+}
+.icon-down {
+    transform: rotate(-90deg);
+}
+.page {
+    touch-action: none;
+    background-color: $black;
+    position: relative;
+    min-width: 280px;
+    &::-webkit-scrollbar {
+        width: 0 !important;
+        display: none;
+    }
+}
+.page-loading {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.container {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+}

@@ -1,0 +1,124 @@
+.menu {
+    background-color: $base-light;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.menu__header {
+    display: flex;
+    align-items: center;
+    color: $menu-color;
+    font-weight: $font-bold;
+    transition: color 0.19s linear;
+    margin-bottom: 30px;
+    &:hover {
+        color: $text-color;
+        .menu__profile-type {
+            background-color: #00f7e9;
+        }
+    }
+}
+.menu__profile-img.icon-profile {
+    width: 100%;
+    height: 76px;
+    margin-right: 20px;
+    flex: 0 0 auto;
+    max-width: 76px;
+}
+.menu__profile-about {
+    flex: 0 0 auto;
+    max-width: calc(100% - 96px);
+}
+.menu__profile-name {
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}
+.menu__profile-type {
+    display: inline-block;
+    font-size: 17px;
+    color: #fff;
+    padding: 6px 12px;
+    background-color: #00cabf;
+    border-radius: 5px;
+    line-height: 1;
+    transition: background-color 0.19s linear;
+}
+.menu__place {
+    color: $menu-color;
+    display: flex;
+    font-weight: 550;
+    justify-content: center;
+    padding: 8px 0;
+    margin: 0 15px;
+    border: 1px solid #e8e8e8;
+    border-width: 1px 0 1px 0;
+    .icon {
+        font-size: 23px;
+        margin-right: 10px;
+    }
+}
+.menu__nav {
+    margin-top: 40px;
+    font-weight: 400;
+}
+.menu__item {
+    position: relative;
+    margin-bottom: 20px;
+    &.active::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #fd9733;
+        position: absolute;
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -20px;
+    }
+}
+.menu__list{
+    padding: 0 20px;
+}
+.menu__item.active .menu__link {
+    color: $orange;
+}
+.menu__link {
+    font-size: 20px;
+    color: $menu-color;
+    transition: color .19s ease;
+    &:hover{
+        color: $orange;
+    }
+    .icon {
+        margin-right: 10px;
+        font-size: 24px;
+    }
+}
+.menu__notify {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 11px;
+    background-color: #fd9733;
+    color: #fff;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.menu__log-out{
+    margin-top: auto;
+    .btn{
+        margin-top: 10px;
+        background-color: #333;
+        width: 100%;
+    }
+}

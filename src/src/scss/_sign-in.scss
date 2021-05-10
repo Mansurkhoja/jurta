@@ -1,0 +1,150 @@
+
+
+.sign-in-modal {
+    z-index: 10;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transform: translateY(100%);
+    overflow: hidden;
+    &.active {
+        visibility: visible;
+        display: flex;
+        animation: showSignin 0.25s ease-in 0s 1 forwards;
+        background-color: rgba($color: $dark-blue, $alpha: 0.89);
+    }
+}
+@keyframes showSignin {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.sign-in-modal-container {
+    max-width: 720px;
+    width: 100%;
+    text-align: center;
+}
+.sign-in-modal__inner {
+    background-color: $base-light;
+    padding: 20px 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: inline-block;
+    touch-action: manipulation;
+    // transform: translateY(100%);
+    //transition: transform .2s ease-in;
+}
+// .sign-in-modal.active .sign-in-modal__inner {
+//     transform: translateY(0);
+//     transition: transform .4s linear;
+// }
+.sign-in-title {
+    margin: 0;
+    font-size: 22px;
+    color: #000000;
+    text-align: center;
+}
+.sign-in-sub-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: $black;
+    display: block;
+    margin: 20px 0;
+    text-align: left;
+}
+.sign-in-input {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+.days-of-week {
+    color: $orange;
+}
+.datepicker-picker {
+    position: relative;
+}
+
+.datepicker-grid {
+    color: $dark-blue;
+}
+.datepicker-header .datepicker-controls .button.view-switch {
+    color: $dark-blue;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c1c0c0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.button.prev-btn,
+.button.next-btn {
+    position: absolute;
+    z-index: 2;
+    background-color: $orange;
+    top: 50%;
+    transform: translateY(-50%);
+    border-color: $orange;
+    svg {
+        height: 24px;
+        width: 16px;
+        fill: #fff;
+    }
+}
+.datepicker-header .datepicker-controls .button:hover {
+    background-color: $orange;
+}
+.datepicker-header .datepicker-controls .button:focus:not(:active) {
+    box-shadow: none;
+}
+
+.button.prev-btn {
+    left: -36px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.button.next-btn {
+    right: -36px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.mtr-arrow.up span {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16' fill='%23000'%3E%3Cpath d='M23.9978,15.1747a.871.871,0,0,1-.93947.78034.99985.99985,0,0,1-.793-.35986L11.9978,2.26849,1.73014,15.59521A1.06166,1.06166,0,0,1,.43089,15.829.70484.70484,0,0,1,.1458,14.75562L11.2056.40068a1.06121,1.06121,0,0,1,1.29851-.2371A.8782.8782,0,0,1,12.79.40068L23.8498,14.75562A.68352.68352,0,0,1,23.9978,15.1747Z' /%3E%3C/svg%3E");
+}
+.mtr-arrow.down span {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16' fill='%23000'%3E%3Cpath d='M.0029.82181A.871.871,0,0,1,.94237.04147a.99983.99983,0,0,1,.79295.35986L12.0029,13.728,22.27056.4013A1.06165,1.06165,0,0,1,23.56981.16754a.70486.70486,0,0,1,.28509,1.07335L12.7951,15.59583a1.06122,1.06122,0,0,1-1.29851.2371.8782.8782,0,0,1-.28588-.2371L.1509,1.24089A.68358.68358,0,0,1,.0029.82181Z' /%3E%3C/svg%3E");
+}
+.mtr-arrow span {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.mtr-content,
+.datepicker-picker,
+.datepicker-title,
+.datepicker-controls .view-switch {
+    background-color: #e8e8e8;
+}
+.mtr-content {
+    border-radius: 6px;
+    color: $dark-blue;
+}
+.mtr-input {
+    background-color: #e8e8e8;
+    font-weight: $font-bold;
+    color: $dark-blue;
+    &:focus {
+        outline: 0;
+    }
+}
+.mtr-row::after {
+    content: ":";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $dark-blue;
+}

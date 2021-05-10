@@ -1,0 +1,74 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    z-index: 8;
+    min-width: 280px;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        background-color: $base-light;
+        height: 100%;
+        overflow: hidden;
+    }
+    &__item {
+        flex: 0 0 20%;
+        max-width: 20%;
+        &--add {
+            flex: 0 0 18%;
+            max-width: 18%;
+            .footer__link {
+                justify-content: center;
+                padding: 0;
+                img {
+                    width: 60px;
+                    height: auto;
+                    transition: transform 0.25s ease-in;
+                }
+                &:hover {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+    &__link {
+        user-select: none;
+        position: relative;
+        color: $dark-blue;
+        font-size: 14px;
+        font-weight: $font-roman;
+        font-weight: $font-medium;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        line-height: 1.2;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 10px 0 5px;
+        transition: color 0.15s ease-in;
+        .icon {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        &:hover {
+            color: $orange;
+        }
+        &.active{
+            color: $orange;
+        }
+    }
+}
+.input-video{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}

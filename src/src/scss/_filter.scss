@@ -1,0 +1,30 @@
+.filter{
+    padding-top: 77px;
+    padding-bottom: 75px;
+    background-color: rgba($color: $dark-blue, $alpha: 0.8);
+}
+#filter.modal{
+    z-index: 6;
+}
+.filter__items{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+    .btn{
+        width: 100%;
+        +.btn{
+            margin-top: 10px;
+        }
+    }
+    .form-reset{
+        color: $dark-blue;
+        background-color: $base-light;
+    }
+}
+.filter__item{
+    flex: 1 0 50%;
+    min-width: 50%;
+    max-width: 100%;
+    margin-bottom: 15px;
+    padding: 0 5px;
+}
