@@ -5,9 +5,10 @@
     text-transform: uppercase;
     margin: 0 -15px;
     position: relative;
+    background-color: $base-light;
     span {
         position: absolute;
-        bottom: -1px;
+        bottom: 0;
         left: 0;
         width: 50%;
         height: 2px;
@@ -15,9 +16,18 @@
         transition: transform 0.19s ease-in;
         transform: translateX(0);
     }
+    &--four{
+        span{
+            width: 25%;
+        }
+        .tab-link{
+            max-width: 25%;
+            flex: 0 0 25%;
+        }
+    }
 }
 .tab-link {
-    line-height: 50px;
+    line-height: 48px;
     max-width: 50%;
     flex: 0 0 50%;
     text-align: center;
@@ -25,7 +35,9 @@
     font-size: 18px;
     font-weight: $font-medium;
     border-bottom: 2px solid $menu-color;
-    transition: color 0.19s ease-out;
+    transition: color 0.29s ease-in;
+    max-height: 50px;
+    overflow: auto;
     &.active {
         color: $orange;
     }
@@ -34,13 +46,31 @@
             transform: translateX(100%);
         }
     }
+    &:nth-child(3).active {
+        ~ span {
+            transform: translateX(200%);
+        }
+    }
+    &:nth-child(4).active {
+        ~ span {
+            transform: translateX(300%);
+        }
+    }
 }
 .tab-content {
     [data-tab-content] {
         display: none;
+        &.active{
+            display: block;
+        }
         &.active {
             &.objects {
                 display: flex;
+            }
+        }
+        &.active {
+            &.saved-objects {
+                display: block;
             }
         }
     }

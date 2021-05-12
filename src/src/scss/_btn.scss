@@ -30,6 +30,20 @@
     &--link {
         border-radius: 25px;
         padding: 7px 14px;
+        &.btn--primary{
+            text-transform: none;
+        }
+    }
+    &--more{
+        background-color: $orange;
+        font-size: 18px;
+        padding: 4px 14px;
+        //border: 1px solid $orange;
+        &:hover,
+        &:focus {
+            color: $orange;
+            background-color: $base-light;
+        }
     }
     &--dark {
         background-color: $dark-blue;

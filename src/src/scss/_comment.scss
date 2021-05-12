@@ -1,0 +1,126 @@
+// #comment.modal{
+//     height: 80%;
+//     top: auto;
+//     bottom: 0;
+// }
+#comment{
+    z-index: 10;
+}
+.comment{
+    border-radius: 25px 25px 0 0;
+}
+.comment__header {
+    position: relative;
+    text-align: center;
+    padding: 10px 52px 10px 15px;
+}
+.comment__count {
+    font-weight: $font-medium;
+    max-height: 26px;
+    overflow: auto;
+    color: #949494;
+    // padding: 0 32px;
+    span {
+        margin-right: 5px;
+    }
+}
+.comment__close {
+    cursor: pointer;
+    position: absolute;
+    display: inline-flex;
+    top: 10px;
+    right: 15px;
+    color: #333;
+}
+.comment__body {
+    padding: 10px 6px;
+    max-height: calc(100% - 115px);
+    height: 100%;
+    overflow: auto;
+  
+}
+.comment__item {
+    box-shadow: 0px 1px 5px rgba($color: #000000, $alpha: .06);
+    background-color: $white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px 10px 85px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    &--respond {
+        margin-left: 20px;
+    }
+}
+.comment__avatar {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.comment__name {
+    margin-bottom: 10px;
+    color: #949494;
+}
+.comment__text {
+    color: #333;
+}
+.comment-actions {
+    text-align: right;
+    margin-top: 10px;
+}
+.btn-comment {
+    font-size: 20px;
+    padding: 2px;
+    &--respond {
+        color: #949494;
+    }
+    &--remove {
+        color: #e85d5d;
+        margin-left: 10px;
+    }
+}
+.comment__input {
+    position: relative;
+    form{
+        display: flex;
+    }
+    textarea {
+        color: #949494;
+        border: 0;
+        outline: none;
+        font-size: 18px;
+        padding: 10px 60px 10px 15px;
+        letter-spacing: 0.03em;
+        width: 100%;
+        resize: none;
+        overflow: auto;
+        margin: 0;
+        line-height: 1;
+       height: 70px;
+        &::placeholder {
+            color: #c0c0c0;
+            font-size: 18px;
+            letter-spacing: 0.03em;
+        }
+    }
+}
+.comment__input-submit {
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: #20293d;
+}

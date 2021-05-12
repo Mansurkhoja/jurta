@@ -1,62 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
     <title>Jurta Video Tour</title>
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/libs.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-    <div class="loader-container" id="loader">
+    <div class="loader-container">
         <div class="loader-hi">
             JURTA
         </div>
-        <button class="btn btn--text btn--loader" id="loader-close">Подобрать жилье</button>
+        <button class="btn btn--loader" id="loader-close">Подобрать жилье</button>
     </div>
-    <div class="page-video page-loading" id="page-video">
+    <div class="page page-loading">
         <header class="header">
             <nav class="navbar container">
                 <a href="https://jurta.kz/" class="navbar__logo">
                     <img src="img/logo.png" alt="JURTA LOGO">
                 </a>
-                <ul class="navbar__list">
-                    <li class="navbar__item"><a href="#" class="navbar__link active">Горящие</a></li>
-                    <li class="navbar__item"><a href="#" class="navbar__link">Без комиссии</a></li>
-                    <li class="navbar__item"><a href="#" class="navbar__link">Новые</a></li>
-                </ul>
+                <a href="#" class="navbar__filter" data-toggle="modal" data-target="filter">
+                    Фильтр
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                        <use xlink:href="img/icons/sprite.svg#filter" />
+                    </svg>
+                </a>
             </nav>
         </header>
         <main class="main">
-            <div class="main-container swiper-container container">
+            <div class="main-container swiper-container">
                 <div class="main__inner swiper-wrapper">
                     <div class="main__item swiper-slide">
                         <div class="main__item-inner">
-                            <div class="video-container">
-                                <video
-                                    src="video/video-1.mp4"
-                                    loop muted playsinline webkit-playsinline="true" preload="metadata" class="video"
-                                    id="jv">dont support this video</video>
-                                <div class="video-btn">
-                                    <button class="btn btn--play" data-mans="jv">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon--play">
-                                            <use xlink:href="img/icons/sprite.svg#play"></use>
-                                        </svg>
-                                    </button>
-                                </div>
+                            <div class="video-btn">
+                                <button class="btn btn--play" data-mans="jv1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon--play">
+                                        <use xlink:href="img/icons/sprite.svg#play"></use>
+                                    </svg>
+                                </button>
                             </div>
                             <div class="video-text">
+                                <a href="#" class="btn btn--link" data-toggle="action" data-target="sign-in">Записаться
+                                    на показ</a>
                                 <div class="video-text__item video-name">
-                                    ЖК Bi City Seul 2299
+                                    BI Village Deluxe, 290 500 000 ₸
                                 </div>
                                 <div class="video-text__item video-descr">
                                     4-комнатная квартира • 4 из 9 • 127 м²
                                 </div>
                                 <div class="video-text__item video-place">
-                                    Нур-Султан, Есильский район
+                                    Нур-Султан, Есильский район <br>
                                     Ул. Сауран, 18
                                 </div>
                             </div>
@@ -64,6 +64,13 @@
                                 <a title="Перейти на страницу профиля агента" href="https://jurta.kz/" target="_blank"
                                     rel="noopener noreferrer" class="icon-profile"
                                     style="background-image: url(./img/profile.jpg);"></a>
+                            </div>
+                            <div class="video-action video-call">
+                                <a title="Позвонить агенту" href="tel:+999" class="btn btn--action btn--call">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-call">
+                                        <use xlink:href="img/icons/sprite.svg#call" />
+                                    </svg>
+                                </a>
                             </div>
                             <div class="video-action video-like">
                                 <button class="btn btn--action btn--like">
@@ -73,41 +80,48 @@
                                 </button>
                             </div>
                             <div class="video-action video-comment">
-                                <button class="btn btn--action btn--comment">
+                                <button class="btn btn--action btn--comment" data-toggle="action" data-target="comment">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-comment">
                                         <use xlink:href="img/icons/sprite.svg#comment" />
                                     </svg>
                                 </button>
                             </div>
+                            <div class="video-action video-share">
+                                <button class="btn btn--action btn--share" data-toggle="action" data-target="share">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-share">
+                                        <use xlink:href="img/icons/sprite.svg#share" />
+                                    </svg>
+                                </button>
+                            </div>
                             <div class="video-action video-more">
-                                <a href="#" class="video-more__link">Подробнее</a>
+                                <a href="#" class="video-more__link btn btn--link btn--more">Подробнее</a>
+                            </div>
+                            <div class="video-container">
+                                <video src="video/video-1.mp4" loop muted playsinline webkit-playsinline="true"
+                                    preload="metadata" class="video" id="jv1">dont support this video</video>
                             </div>
                         </div>
                     </div>
                     <div class="main__item swiper-slide">
                         <div class="main__item-inner">
-                            <div class="video-container">
-                                <video
-                                    src="video/video-2.mp4"
-                                    loop muted playsinline webkit-playsinline="true" preload="metadata" class="video"
-                                    id="jv02">dont support this video</video>
-                                <div class="video-btn">
-                                    <button class="btn btn--play" data-mans="jv02">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon--play">
-                                            <use xlink:href="img/icons/sprite.svg#play"></use>
-                                        </svg>
-                                    </button>
-                                </div>
+                            <div class="video-btn">
+                                <button class="btn btn--play" data-mans="jv2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon--play">
+                                        <use xlink:href="img/icons/sprite.svg#play"></use>
+                                    </svg>
+                                </button>
                             </div>
                             <div class="video-text">
+                                <a href="#" class="btn btn--link" data-toggle="action" data-target="sign-in">Записаться
+                                    на показ</a>
                                 <div class="video-text__item video-name">
-                                    ЖК Bi City Seul 2299
+                                    BI Village Deluxe, 290 500 000 ₸
                                 </div>
                                 <div class="video-text__item video-descr">
                                     4-комнатная квартира • 4 из 9 • 127 м²
                                 </div>
                                 <div class="video-text__item video-place">
-                                    Нур-Султан, Есильский район
+                                    Нур-Султан, Есильский район <br>
                                     Ул. Сауран, 18
                                 </div>
                             </div>
@@ -115,6 +129,13 @@
                                 <a title="Перейти на страницу профиля агента" href="https://jurta.kz/" target="_blank"
                                     rel="noopener noreferrer" class="icon-profile"
                                     style="background-image: url(./img/profile.jpg);"></a>
+                            </div>
+                            <div class="video-action video-call">
+                                <a title="Позвонить агенту" href="tel:+999" class="btn btn--action btn--call">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-call">
+                                        <use xlink:href="img/icons/sprite.svg#call" />
+                                    </svg>
+                                </a>
                             </div>
                             <div class="video-action video-like">
                                 <button class="btn btn--action btn--like">
@@ -124,269 +145,1209 @@
                                 </button>
                             </div>
                             <div class="video-action video-comment">
-                                <button class="btn btn--action btn--comment">
+                                <button class="btn btn--action btn--comment" data-toggle="action" data-target="comment">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-comment">
                                         <use xlink:href="img/icons/sprite.svg#comment" />
                                     </svg>
                                 </button>
                             </div>
-                            <div class="video-action video-more">
-                                <a href="#" class="video-more__link">Подробнее</a>
+                            <div class="video-action video-share">
+                                <button class="btn btn--action btn--share" data-toggle="action" data-target="share">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-share">
+                                        <use xlink:href="img/icons/sprite.svg#share" />
+                                    </svg>
+                                </button>
                             </div>
-                        </div>
-                    </div>
-                    <div class="main__item swiper-slide">
-                        <div class="main__item-inner">
+                            <div class="video-action video-more">
+                                <a href="#" class="video-more__link btn btn--link btn--more">Подробнее</a>
+                            </div>
                             <div class="video-container">
-                                <video
-                                    src="https://storage-object.pscloud.io:443/Videoobzory/%D0%96%D0%BA%20%D0%A1%D0%B0%D0%BD%D0%B0%20%D0%93%D0%B0%D1%83%D1%85%D0%B0%D1%80.mp4"
-                                    loop muted playsinline webkit-playsinline="true" preload="metadata" class="video"
-                                    id="jv1">dont support this video</video>
-                                <div class="video-btn">
-                                    <button class="btn btn--play" data-mans="jv1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon--play">
-                                            <use xlink:href="img/icons/sprite.svg#play"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="video-text">
-                                <div class="video-text__item video-name">
-                                    ЖК Bi City Seul 2299
-                                </div>
-                                <div class="video-text__item video-descr">
-                                    4-комнатная квартира • 4 из 9 • 127 м²
-                                </div>
-                                <div class="video-text__item video-place">
-                                    Нур-Султан, Есильский район
-                                    Ул. Сауран, 18
-                                </div>
-                            </div>
-                            <div class="video-action video-profile">
-                                <a title="Перейти на страницу профиля агента" href="https://jurta.kz/" target="_blank"
-                                    rel="noopener noreferrer" class="icon-profile"
-                                    style="background-image: url(./img/profile.jpg);"></a>
-                            </div>
-                            <div class="video-action video-like">
-                                <button class="btn btn--action btn--like">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-like">
-                                        <use xlink:href="img/icons/sprite.svg#like" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="video-action video-comment">
-                                <button class="btn btn--action btn--comment">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-comment">
-                                        <use xlink:href="img/icons/sprite.svg#comment" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="video-action video-more">
-                                <a href="#" class="video-more__link">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main__item swiper-slide">
-                        <div class="main__item-inner">
-                            <div class="video-container">
-                                <video
-                                    src="https://storage-object.pscloud.io:443/Videoobzory/%D0%96%D0%9A%20%D0%9E%D1%80%D0%B8%D1%8D%D0%BD%D1%82%D0%B0%D0%BB%D1%8C%20-%20%D0%96%D0%B0%D0%BD%D0%B0%D1%80%D0%B0%20%D0%A1.mp4"
-                                    loop muted playsinline webkit-playsinline="true" preload="metadata" class="video"
-                                    id="jv2">dont support this video</video>
-                                <div class="video-btn">
-                                    <button class="btn btn--play" data-mans="jv2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon--play">
-                                            <use xlink:href="img/icons/sprite.svg#play"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="video-text">
-                                <div class="video-text__item video-name">
-                                    ЖК Bi City Seul 2299
-                                </div>
-                                <div class="video-text__item video-descr">
-                                    4-комнатная квартира • 4 из 9 • 127 м²
-                                </div>
-                                <div class="video-text__item video-place">
-                                    Нур-Султан, Есильский район
-                                    Ул. Сауран, 18
-                                </div>
-                            </div>
-                            <div class="video-action video-profile">
-                                <a title="Перейти на страницу профиля агента" href="https://jurta.kz/" target="_blank"
-                                    rel="noopener noreferrer" class="icon-profile"
-                                    style="background-image: url(./img/profile.jpg);"></a>
-                            </div>
-                            <div class="video-action video-like">
-                                <button class="btn btn--action btn--like">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-like">
-                                        <use xlink:href="img/icons/sprite.svg#like" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="video-action video-comment">
-                                <button class="btn btn--action btn--comment">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-comment">
-                                        <use xlink:href="img/icons/sprite.svg#comment" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="video-action video-more">
-                                <a href="#" class="video-more__link">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main__item swiper-slide">
-                        <div class="main__item-inner">
-                            <div class="video-container">
-                                <video
-                                    src="https://storage-object.pscloud.io:443/Videoobzory/%D0%96%D0%9A%20%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D1%8B%D0%B9%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB%20-%20%D0%90%D0%BB%D1%82%D1%8B%D0%BD.mp4"
-                                    loop muted playsinline webkit-playsinline="true" preload="metadata" class="video"
-                                    id="jv3">dont support this video</video>
-                                <div class="video-btn">
-                                    <button class="btn btn--play" data-mans="jv3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon--play">
-                                            <use xlink:href="img/icons/sprite.svg#play"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="video-text">
-                                <div class="video-text__item video-name">
-                                    ЖК Bi City Seul 2299
-                                </div>
-                                <div class="video-text__item video-descr">
-                                    4-комнатная квартира • 4 из 9 • 127 м²
-                                </div>
-                                <div class="video-text__item video-place">
-                                    Нур-Султан, Есильский район
-                                    Ул. Сауран, 18
-                                </div>
-                            </div>
-                            <div class="video-action video-profile">
-                                <a title="Перейти на страницу профиля агента" href="https://jurta.kz/" target="_blank"
-                                    rel="noopener noreferrer" class="icon-profile"
-                                    style="background-image: url(./img/profile.jpg);"></a>
-                            </div>
-                            <div class="video-action video-like">
-                                <button class="btn btn--action btn--like">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-like">
-                                        <use xlink:href="img/icons/sprite.svg#like" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="video-action video-comment">
-                                <button class="btn btn--action btn--comment">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-comment">
-                                        <use xlink:href="img/icons/sprite.svg#comment" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="video-action video-more">
-                                <a href="#" class="video-more__link">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main__item swiper-slide">
-                        <div class="main__item-inner">
-                            <div class="video-container">
-                                <video
-                                    src="https://storage-object.pscloud.io:443/Videoobzory/BI%20Village%20%D0%BA%D0%BE%D1%82%D1%82%D0%B5%D0%B4%D0%B6-%D0%9C%D0%B0%D0%B4%D0%B8%D0%BD%D0%B0%20%D0%90%D0%B1%D0%B4%D1%80%D0%B0%D0%B8%D0%BC%D0%BE%D0%B2%D0%B0.mp4"
-                                    loop muted playsinline webkit-playsinline="true" preload="metadata" class="video"
-                                    id="jv4">dont support this video</video>
-                                <div class="video-btn">
-                                    <button class="btn btn--play" data-mans="jv4">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon--play">
-                                            <use xlink:href="img/icons/sprite.svg#play"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="video-text">
-                                <div class="video-text__item video-name">
-                                    ЖК Bi City Seul 2299
-                                </div>
-                                <div class="video-text__item video-descr">
-                                    4-комнатная квартира • 4 из 9 • 127 м²
-                                </div>
-                                <div class="video-text__item video-place">
-                                    Нур-Султан, Есильский район
-                                    Ул. Сауран, 18
-                                </div>
-                            </div>
-                            <div class="video-action video-profile">
-                                <a title="Перейти на страницу профиля агента" href="https://jurta.kz/" target="_blank"
-                                    rel="noopener noreferrer" class="icon-profile"
-                                    style="background-image: url(./img/profile.jpg);"></a>
-                            </div>
-                            <div class="video-action video-like">
-                                <button class="btn btn--action btn--like">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-like">
-                                        <use xlink:href="img/icons/sprite.svg#like" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="video-action video-comment">
-                                <button class="btn btn--action btn--comment">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-comment">
-                                        <use xlink:href="img/icons/sprite.svg#comment" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="video-action video-more">
-                                <a href="#" class="video-more__link">Подробнее</a>
+                                <video src="video/video-1.mp4" loop muted playsinline webkit-playsinline="true"
+                                    preload="metadata" class="video" id="jv2">dont support this video</video>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
+        <!-- <div class="page-profile">
+
+        </div> -->
         <footer class="footer">
             <ul class="footer__list container">
-                <li class="footer__item"><a id="firstVideo" href="#" class="footer__link">
+                <li class="footer__item">
+                    <a href="#" class="footer__link active first-video">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                             <use xlink:href="img/icons/sprite.svg#home"></use>
-                        </svg>Главная</a></li>
-                <li class="footer__item"><a href="https://jurta.kz#search_estate_form_text" class="footer__link"><svg
-                            xmlns="http://www.w3.org/2000/svg" class="icon">
+                        </svg>Главная</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link" data-toggle="modal" data-target="search">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                             <use xlink:href="img/icons/sprite.svg#search"></use>
-                        </svg>Поиск</a></li>
-                <li class="footer__item footer__item--add"><a href="#" class="footer__link">
+                        </svg>Поиск</a>
+                </li>
+                <li class="footer__item footer__item--add">
+                    <a href="#" class="footer__link">
                         <img src="img/plus.svg" alt="+">
                         <input type="file" accept="video/*;capture=camcorder" class="input-video">
-                    </a></li>
-                <li class="footer__item"><a href="#" class="footer__link" id="sign-in"><svg
-                            xmlns="http://www.w3.org/2000/svg" class="icon">
-                            <use xlink:href="img/icons/sprite.svg#sign-up"></use>
-                        </svg>Записаться</a></li>
-                <li class="footer__item"><a href="#" class="footer__link"><svg xmlns="http://www.w3.org/2000/svg"
-                            class="icon">
-                            <use xlink:href="img/icons/sprite.svg#call"></use>
-                        </svg>Связаться</a></li>
+                    </a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link" data-toggle="modal" data-target="wishlist">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                            <use xlink:href="img/icons/sprite.svg#heart"></use>
+                        </svg>Избранное</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link" data-toggle="modal" data-target="menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                            <use xlink:href="img/icons/sprite.svg#menu"></use>
+                        </svg>Меню</a>
+                </li>
             </ul>
         </footer>
-        <div class="sign-in-modal">
-            <div class="sign-in-modal-container">
-                <div class="sign-in-modal__inner">
-                    <h2 class="sign-in-title">
-                        Записаться на показ
-                    </h2>
+    </div>
+    <!-- orientation -->
+    <div class="orientation">
+        <div class="loader-hi">
+            Поверните обратно для лучшего просмотра))
+        </div>
+    </div>
+    <!-- filter -->
+    <div class="modal right" id="filter">
+        <div class="modal__inner">
+            <div class="modal__content filter">
+                <form action="#" method="post">
+                    <div class="filter__items">
+                        <div class="filter__item">
+                            <input type="checkbox" id="filter-hot" name="filter-hot" title="Горящие"
+                                class="toggle-input">
+                            <label class="custom-input" for="filter-hot"><span>Горящие</span></label>
+                        </div>
+                        <div class="filter__item">
+                            <input type="checkbox" id="filter-new" name="filter-new" title="Новые" class="toggle-input">
+                            <label class="custom-input" for="filter-new"><span>Новые</span></label>
+                        </div>
+                    </div>
+                    <div class="filter__items">
+                        <div class="filter__title form-title">
+                            Тип НЕДВИЖИМОСТИ
+                        </div>
+                        <div class="filter__item">
+                            <select name="select" class="custom-input drop-select">
+                                <option value="value1" selected>Квартира</option>
+                                <option value="value2">2Квартира</option>
+                                <option value="value3">3Квартира</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter__items">
+                        <div class="filter__title form-title">
+                            Комнатность
+                        </div>
+                        <div class="filter__item">
+                            <div class="choice-select">
+                                <input class="choice" type="radio" id="choice1" name="flat" value="1">
+                                <label class="custom-input" for="choice1">1</label>
+
+                                <input class="choice" type="radio" id="choice2" name="flat" value="2">
+                                <label class="custom-input" for="choice2">2</label>
+
+                                <input class="choice" type="radio" id="choice3" name="flat" value="3">
+                                <label class="custom-input" for="choice3">3</label>
+
+                                <input class="choice" type="radio" id="choice4" name="flat" value="5">
+                                <label class="custom-input" for="choice4">4</label>
+
+                                <input class="choice" type="radio" id="choice5" name="flat" value="5">
+                                <label class="custom-input" for="choice5">5+</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter__items">
+                        <div class="filter__title form-title">
+                            ДИАПАЗОН ЦЕН, т
+                        </div>
+                        <div class="filter__item">
+                            <input class="custom-input input" placeholder="От" type="text" id="minPrice" name="minPrice"
+                                required>
+                        </div>
+                        <div class="filter__item">
+                            <input class="custom-input input" placeholder="До" type="text" id="maxPrice" name="maxPrice"
+                                required>
+                        </div>
+                    </div>
+                    <div class="filter__items">
+                        <div class="filter__title form-title">
+                            Площадь, м2
+                        </div>
+                        <div class="filter__item">
+                            <input class="custom-input input" placeholder="От" type="text" id="minArea" name="minArea"
+                                required>
+                        </div>
+                        <div class="filter__item">
+                            <input class="custom-input input" placeholder="До" type="text" id="maxArea" name="maxArea"
+                                required>
+                        </div>
+                    </div>
+                    <div class="filter__items">
+                        <div class="filter__item">
+                            <button class="btn form-reset filter-close" type="reset">Отмена</button>
+                            <button class="btn btn--primary form-submit" type="submit">Показать</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- sign-in -->
+    <div class="modal bottom" id="sign-in">
+        <div class="modal__inner">
+            <div class="modal__content sign-in">
+                <h2 class="sign-in-title">
+                    Записаться на показ
+                </h2>
+                <form action="#" method="post">
+                    <label for="sign-in-date" class="sign-in-sub-title">Выберите дату:</label>
+                    <div id="sign-in-date" class="sign-in-input"></div>
+                    <label for="sign-in-time" class="sign-in-sub-title">Выберите время:</label>
+                    <div id="sign-in-time" class="sign-in-input"></div>
+                    <button class="btn btn--out" type="reset">Отмена</button>
+                    <button class="btn btn--primary" type="submit">Записаться</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- search -->
+    <div class="modal bottom modal--full modal--tab" id="search">
+        <div class="modal__inner">
+            <div class="modal__content search active">
+                <div class="search-form">
                     <form action="#" method="post">
-                        <label for="sign-in-date" class="sign-in-sub-title">Выберите дату:</label>
-                        <div id="sign-in-date" class="sign-in-input"></div>
-                        <label for="sign-in-time" class="sign-in-sub-title">Выберите время:</label>
-                        <div id="sign-in-time" class="sign-in-input"></div>
-                        <button class="btn btn--text btn--sign-in btn--reset" type="reset">Отмена</button>
-                        <button class="btn btn--text btn--sign-in btn--submit" type="submit">Записаться</button>
+                        <div class="search__items">
+                            <div class="search__title form-title">
+                                Тип НЕДВИЖИМОСТИ
+                            </div>
+                            <div class="search__item">
+                                <select name="select" class="custom-input drop-select">
+                                    <option value="value1" selected>Квартира</option>
+                                    <option value="value2">2Квартира</option>
+                                    <option value="value3">3Квартира</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="search__items">
+                            <div class="search__title form-title">
+                                Комнатность
+                            </div>
+                            <div class="search__item">
+                                <div class="choice-select">
+                                    <input class="choice" type="radio" id="search-choice1" name="flat" value="1">
+                                    <label class="custom-input" for="search-choice1">1</label>
+
+                                    <input class="choice" type="radio" id="search-choice2" name="flat" value="2">
+                                    <label class="custom-input" for="search-choice2">2</label>
+
+                                    <input class="choice" type="radio" id="search-choice3" name="flat" value="3">
+                                    <label class="custom-input" for="search-choice3">3</label>
+
+                                    <input class="choice" type="radio" id="search-choice4" name="flat" value="5">
+                                    <label class="custom-input" for="search-choice4">4</label>
+
+                                    <input class="choice" type="radio" id="search-choice5" name="flat" value="5">
+                                    <label class="custom-input" for="search-choice5">5+</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search__items">
+                            <div class="search__title form-title">
+                                ДИАПАЗОН ЦЕН, т
+                            </div>
+                            <div class="search__item">
+                                <input class="custom-input input" placeholder="От" type="text" id="minPrice"
+                                    name="minPrice" required>
+                            </div>
+                            <div class="search__item">
+                                <input class="custom-input input" placeholder="До" type="text" id="maxPrice"
+                                    name="maxPrice" required>
+                            </div>
+                        </div>
+                        <div class="search__items">
+                            <div class="search__title form-title">
+                                Площадь, м2
+                            </div>
+                            <div class="search__item">
+                                <input class="custom-input input" placeholder="От" type="text" id="minArea"
+                                    name="minArea" required>
+                            </div>
+                            <div class="search__item">
+                                <input class="custom-input input" placeholder="До" type="text" id="maxArea"
+                                    name="maxArea" required>
+                            </div>
+                        </div>
+                        <div class="search__items search__items--additional">
+                            <div class="search__title form-title">
+                                Местоположение
+                            </div>
+                            <div class="search__item search__item--full">
+                                <select name="select" class="custom-input drop-select">
+                                    <option value="value1" selected>Район</option>
+                                    <option value="value2">2Квартира</option>
+                                    <option value="value3">3Квартира</option>
+                                </select>
+                            </div>
+                            <div class="search__item search__item--full">
+                                <select name="select" class="custom-input drop-select">
+                                    <option value="value1" selected>Улица</option>
+                                    <option value="value2">2Квартира</option>
+                                    <option value="value3">3Квартира</option>
+                                </select>
+                            </div>
+                            <div class="search__item search__item--full">
+                                <select name="select" class="custom-input drop-select">
+                                    <option value="value1" selected>Жилой комплекс</option>
+                                    <option value="value2">2Квартира</option>
+                                    <option value="value3">3Квартира</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="search__items search__items--additional">
+                            <div class="search__title form-title">
+                                ПЛАНИРОВКА
+                            </div>
+                            <div class="search__item">
+                                <div class="choice-select">
+                                    <input class="choice" type="radio" id="search-choice-plan1"
+                                        name="search-choice-plan" value="1">
+                                    <label class="custom-input" for="search-choice-plan1">Любое</label>
+                                    <input class="choice" type="radio" id="search-choice-plan2"
+                                        name="search-choice-plan" value="2">
+                                    <label class="custom-input" for="search-choice-plan2">Студия</label>
+                                    <input class="choice" type="radio" id="search-choice-plan3"
+                                        name="search-choice-plan" value="3">
+                                    <label class="custom-input custom-input--two"
+                                        for="search-choice-plan3">Изолированные <br>
+                                        комнаты</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search__items search__items--additional">
+                            <div class="search__title form-title">
+                                СОСТОЯНИЕ НЕДВИЖИМОСТИ
+                            </div>
+                            <div class="search__item">
+                                <select name="select" class="custom-input drop-select">
+                                    <option value="value1" selected>Дизайнерский ремонт</option>
+                                    <option value="value2">2Квартира</option>
+                                    <option value="value3">3Квартира</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="search__items search__items--additional">
+                            <div class="search__title form-title">
+                                ГОД ПОСТРОЙКИ
+                            </div>
+                            <div class="search__item">
+                                <input class="custom-input input" placeholder="От" type="text" id="minYear"
+                                    name="minYear" required>
+                            </div>
+                            <div class="search__item">
+                                <input class="custom-input input" placeholder="До" type="text" id="maxYear"
+                                    name="maxYear" required>
+                            </div>
+                        </div>
+                        <div class="search__items search__items--additional">
+                            <div class="search__title form-title">
+                                РАЗМЕР ТОРГА
+                            </div>
+                            <div class="search__item">
+                                <input class="custom-input input" placeholder="От" type="text" id="minTorg"
+                                    name="minTorg" required>
+                            </div>
+                            <div class="search__item">
+                                <input class="custom-input input" placeholder="До" type="text" id="maxTorg"
+                                    name="maxTorg" required>
+                            </div>
+                        </div>
+                        <div class="search__items search__items--additional">
+                            <div class="search__item search__item--full">
+                                <input type="checkbox" id="search-torg" name="search-torg" title="Горящие"
+                                    class="toggle-input">
+                                <label class="custom-input" for="search-torg"><span>Есть торг</span></label>
+                            </div>
+                            <div class="search__item search__item--full">
+                                <input type="checkbox" id="search-encumbrance" name="search-encumbrance" title="Новые"
+                                    class="toggle-input">
+                                <label class="custom-input" for="search-encumbrance"><span>Есть
+                                        обременение</span></label>
+                            </div>
+                            <div class="search__item search__item--full">
+                                <input type="checkbox" id="search-change" name="search-change" title="Новые"
+                                    class="toggle-input">
+                                <label class="custom-input" for="search-change"><span>Обмен</span></label>
+                            </div>
+                        </div>
+                        <div class="search__additional open-additional open-additional-search">
+                            <span>расширенный поиск</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-down">
+                                <use xlink:href="img/icons/sprite.svg#arrow" />
+                            </svg>
+                        </div>
+                        <div class="search__items search__items--btn">
+                            <button class="btn btn--dark form-reset search-close" type="reset">Сбросить</button>
+                            <button class="btn btn--out search-save">Сохранить</button>
+                            <button class="btn btn--primary form-submit search-submit" type="submit">ПОИСК</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="offers">
+                    <div class="offers-header">
+                        <div class="offers-title">
+                            ГОРЯЩИе
+                        </div>
+                        <div class="offers-count">
+                            58
+                        </div>
+                    </div>
+                    <div class="offers-items">
+                        <div class="offers-item">
+                            <div class="offers-img" style="background-image: url(./img/wish4.png);">
+                            </div>
+                            <div class="offers-about">
+                                <div class="offers-name offers-about__item">
+                                    Байтурсынова 71
+                                </div>
+                                <div class="offers-descr offers-about__item">
+                                    3 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="offers-price offers-about__item">
+                                    51 500 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offers-item">
+                            <div class="offers-img" style="background-image: url(./img/wish4.png);">
+                            </div>
+                            <div class="offers-about">
+                                <div class="offers-name offers-about__item">
+                                    Байтурсынова 71
+                                </div>
+                                <div class="offers-descr offers-about__item">
+                                    3 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="offers-price offers-about__item">
+                                    51 500 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offers-item">
+                            <div class="offers-img" style="background-image: url(./img/wish4.png);">
+                            </div>
+                            <div class="offers-about">
+                                <div class="offers-name offers-about__item">
+                                    Байтурсынова 71
+                                </div>
+                                <div class="offers-descr offers-about__item">
+                                    3 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="offers-price offers-about__item">
+                                    51 500 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offers-item">
+                            <div class="offers-img" style="background-image: url(./img/wish4.png);">
+                            </div>
+                            <div class="offers-about">
+                                <div class="offers-name offers-about__item">
+                                    Байтурсынова 71
+                                </div>
+                                <div class="offers-descr offers-about__item">
+                                    3 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="offers-price offers-about__item">
+                                    51 500 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offers-item">
+                            <div class="offers-img" style="background-image: url(./img/wish4.png);">
+                            </div>
+                            <div class="offers-about">
+                                <div class="offers-name offers-about__item">
+                                    Байтурсынова 71
+                                </div>
+                                <div class="offers-descr offers-about__item">
+                                    3 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="offers-price offers-about__item">
+                                    51 500 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offers-item">
+                            <div class="offers-img" style="background-image: url(./img/wish4.png);">
+                            </div>
+                            <div class="offers-about">
+                                <div class="offers-name offers-about__item">
+                                    Байтурсынова 71
+                                </div>
+                                <div class="offers-descr offers-about__item">
+                                    3 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="offers-price offers-about__item">
+                                    51 500 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offers-item">
+                            <div class="offers-img" style="background-image: url(./img/wish4.png);">
+                            </div>
+                            <div class="offers-about">
+                                <div class="offers-name offers-about__item">
+                                    Байтурсынова 71
+                                </div>
+                                <div class="offers-descr offers-about__item">
+                                    3 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="offers-price offers-about__item">
+                                    51 500 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offers-item">
+                            <div class="offers-img" style="background-image: url(./img/wish4.png);">
+                            </div>
+                            <div class="offers-about">
+                                <div class="offers-name offers-about__item">
+                                    Байтурсынова 71
+                                </div>
+                                <div class="offers-descr offers-about__item">
+                                    3 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="offers-price offers-about__item">
+                                    51 500 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="offers">
+                    <div class="offers-header">
+                        <div class="offers-title">
+                            НОВЫЕ
+                        </div>
+                        <div class="offers-count">
+                            158
+                        </div>
+                    </div>
+                    <div class="offers-items">
+                        <div class="offers-item">
+                            <div class="offers-img" style="background-image: url(./img/wish1.png);">
+                            </div>
+                            <div class="offers-about">
+                                <div class="offers-name offers-about__item">
+                                    Байтурсынова 71
+                                </div>
+                                <div class="offers-descr offers-about__item">
+                                    3 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="offers-price offers-about__item">
+                                    51 500 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offers-item">
+                            <div class="offers-img" style="background-image: url(./img/wish1.png);">
+                            </div>
+                            <div class="offers-about">
+                                <div class="offers-name offers-about__item">
+                                    Байтурсынова 71
+                                </div>
+                                <div class="offers-descr offers-about__item">
+                                    3 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="offers-price offers-about__item">
+                                    51 500 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offers-item">
+                            <div class="offers-img" style="background-image: url(./img/wish1.png);">
+                            </div>
+                            <div class="offers-about">
+                                <div class="offers-name offers-about__item">
+                                    Байтурсынова 71
+                                </div>
+                                <div class="offers-descr offers-about__item">
+                                    3 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="offers-price offers-about__item">
+                                    51 500 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offers-item">
+                            <div class="offers-img" style="background-image: url(./img/wish1.png);">
+                            </div>
+                            <div class="offers-about">
+                                <div class="offers-name offers-about__item">
+                                    Байтурсынова 71
+                                </div>
+                                <div class="offers-descr offers-about__item">
+                                    3 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="offers-price offers-about__item">
+                                    51 500 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offers-item">
+                            <div class="offers-img" style="background-image: url(./img/wish1.png);">
+                            </div>
+                            <div class="offers-about">
+                                <div class="offers-name offers-about__item">
+                                    Байтурсынова 71
+                                </div>
+                                <div class="offers-descr offers-about__item">
+                                    3 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="offers-price offers-about__item">
+                                    51 500 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offers-item">
+                            <div class="offers-img" style="background-image: url(./img/wish1.png);">
+                            </div>
+                            <div class="offers-about">
+                                <div class="offers-name offers-about__item">
+                                    Байтурсынова 71
+                                </div>
+                                <div class="offers-descr offers-about__item">
+                                    3 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="offers-price offers-about__item">
+                                    51 500 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__content search-result">
+                <div class="search-result-header">
+                    <div class="search-result-hide">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                            <use xlink:href="img/icons/sprite.svg#go-back" />
+                        </svg><span>РЕЗУЛЬТАТ ПОИСКА</span>
+                    </div>
+                    <div class="search-result-sort">
+                        <span>СОРТИРОВКА</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                            <use xlink:href="img/icons/sprite.svg#filter" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="tab-nav" role="tablist">
+                    <a href="#" class="tab-link active" data-toggle="tab" data-target="search-list">СПИСОК</a>
+                    <a href="#" class="tab-link" data-toggle="tab" data-target="search-map">карта</a>
+                    <span></span>
+                </div>
+                <div class="tab-content">
+                    <div class="objects active" data-tab-content="search-list">
+                        <div class="object-item">
+                            <div class="object-img" style="background-image: url(./img/wish1.png);">
+                                <div class="object-heart liked">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                        <use xlink:href="img/icons/sprite.svg#like"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="object-about">
+                                <div class="object-name object-about__item">
+                                    ЖК Ботанический
+                                </div>
+                                <div class="object-descr object-about__item">
+                                    4-комнатная квартира • 4 из 9 • 127 м²
+                                </div>
+                                <div class="object-price object-about__item">
+                                    67 800 000 тг
+                                </div>
+                            </div>
+                        </div>
+                        <div class="object-item">
+                            <div class="object-img" style="background-image: url(./img/wish2.png);">
+                                <div class="object-heart liked">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                        <use xlink:href="img/icons/sprite.svg#like"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="object-about">
+                                <div class="object-name object-about__item">
+                                    ЖК Панорама Парк
+                                </div>
+                                <div class="object-descr object-about__item">
+                                    3 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="object-price object-about__item">
+                                    45 000 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                        <div class="object-item">
+                            <div class="object-img" style="background-image: url(./img/wish3.png);">
+                                <div class="object-heart liked">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                        <use xlink:href="img/icons/sprite.svg#like"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="object-about">
+                                <div class="object-name object-about__item">
+                                    Сауран 20
+                                </div>
+                                <div class="object-descr object-about__item">
+                                    2 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="object-price object-about__item">
+                                    24 400 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                        <div class="object-item">
+                            <div class="object-img" style="background-image: url(./img/wish4.png);">
+                                <div class="object-heart liked">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                        <use xlink:href="img/icons/sprite.svg#like"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="object-about">
+                                <div class="object-name object-about__item">
+                                    Байтурсынова 71
+                                </div>
+                                <div class="object-descr object-about__item">
+                                    3 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="object-price object-about__item">
+                                    51 500 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                        <div class="empty-list">
+                            <span>
+                                У Вас нет сохраненных поисков, <br>
+                                Выберите параметры для сохранения
+                            </span>
+                            <button class="btn btn--primary" data-toggle="modal" data-target="search">
+                                ПОИСк
+                            </button>
+                        </div>
+                    </div>
+                    <div class="objects" data-tab-content="search-map">
+                        s
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- wishlist -->
+    <div class="modal bottom modal--full modal--tab" id="wishlist">
+        <div class="modal__inner">
+            <div class="modal__content wishlist">
+                <div class="tab-nav" role="tablist">
+                    <a href="#" class="tab-link active" data-toggle="tab" data-target="objects">Объекты</a>
+                    <a href="#" class="tab-link" data-toggle="tab" data-target="saved-objects">СОХРАНЕННЫЕ ПОИСКИ</a>
+                    <span></span>
+                </div>
+                <div class="tab-content">
+                    <div class="objects active" data-tab-content="objects">
+                        <div class="object-item">
+                            <div class="object-img" style="background-image: url(./img/wish1.png);">
+                                <div class="object-heart liked">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                        <use xlink:href="img/icons/sprite.svg#like"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="object-about">
+                                <div class="object-name object-about__item">
+                                    ЖК Ботанический
+                                </div>
+                                <div class="object-descr object-about__item">
+                                    4-комнатная квартира • 4 из 9 • 127 м²
+                                </div>
+                                <div class="object-price object-about__item">
+                                    67 800 000 тг
+                                </div>
+                            </div>
+                        </div>
+                        <div class="object-item">
+                            <div class="object-img" style="background-image: url(./img/wish2.png);">
+                                <div class="object-heart liked">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                        <use xlink:href="img/icons/sprite.svg#like"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="object-about">
+                                <div class="object-name object-about__item">
+                                    ЖК Панорама Парк
+                                </div>
+                                <div class="object-descr object-about__item">
+                                    3 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="object-price object-about__item">
+                                    45 000 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                        <div class="object-item">
+                            <div class="object-img" style="background-image: url(./img/wish3.png);">
+                                <div class="object-heart liked">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                        <use xlink:href="img/icons/sprite.svg#like"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="object-about">
+                                <div class="object-name object-about__item">
+                                    Сауран 20
+                                </div>
+                                <div class="object-descr object-about__item">
+                                    2 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="object-price object-about__item">
+                                    24 400 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                        <div class="object-item">
+                            <div class="object-img" style="background-image: url(./img/wish4.png);">
+                                <div class="object-heart liked">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                        <use xlink:href="img/icons/sprite.svg#like"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="object-about">
+                                <div class="object-name object-about__item">
+                                    Байтурсынова 71
+                                </div>
+                                <div class="object-descr object-about__item">
+                                    3 комнатная • 6 из 8 • 101 м
+                                </div>
+                                <div class="object-price object-about__item">
+                                    51 500 000 ₸
+                                </div>
+                            </div>
+                        </div>
+                        <div class="empty-list">
+                            <span>
+                                У Вас нет сохраненных поисков, <br>
+                                Выберите параметры для сохранения
+                            </span>
+                            <button class="btn btn--primary" data-toggle="modal" data-target="search">
+                                ПОИСк
+                            </button>
+                        </div>
+                    </div>
+                    <div class="saved-objects" data-tab-content="saved-objects">
+                        <div class="saved-object-item">
+                            <div class="saved-object-header">
+                                <div class="saved-object-name">
+                                    2 комнатная для сестры
+                                </div>
+                                <div class="saved-object-heart object-heart liked">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                        <use xlink:href="img/icons/sprite.svg#like"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="saved-object-body">
+                                <div class="saved-object-text">
+                                    <div class="saved-object-price">
+                                        Продажа 17 000 000 - 24 000 000 тг
+                                    </div>
+                                    <div class="saved-object-rooms">2 комнатная квартира</div>
+                                    <div class="saved-object-area">Площадь 70 - 85 м
+                                        <div class="saved-object-btn">
+                                            <button class="btn btn btn--link btn--more">Выбрать</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="saved-object-item">
+                            <div class="saved-object-header">
+                                <div class="saved-object-name">
+                                    2 комнатная для сестры
+                                </div>
+                                <div class="saved-object-heart object-heart liked">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                        <use xlink:href="img/icons/sprite.svg#like"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="saved-object-body">
+                                <div class="saved-object-text">
+                                    <div class="saved-object-price">
+                                        Продажа 17 000 000 - 24 000 000 тг
+                                    </div>
+                                    <div class="saved-object-rooms">2 комнатная квартира</div>
+                                    <div class="saved-object-area">Площадь 70 - 85 м
+                                        <div class="saved-object-btn">
+                                            <button class="btn btn btn--link btn--more">Выбрать</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="saved-object-item">
+                            <div class="saved-object-header">
+                                <div class="saved-object-name">
+                                    2 комнатная для сестры
+                                </div>
+                                <div class="saved-object-heart object-heart liked">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                        <use xlink:href="img/icons/sprite.svg#like"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="saved-object-body">
+                                <div class="saved-object-text">
+                                    <div class="saved-object-price">
+                                        Продажа 17 000 000 - 24 000 000 тг
+                                    </div>
+                                    <div class="saved-object-rooms">2 комнатная квартира</div>
+                                    <div class="saved-object-area">Площадь 70 - 85 м
+                                        <div class="saved-object-btn">
+                                            <button class="btn btn btn--link btn--more">Выбрать</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- menu -->
+    <div class="modal right" id="menu">
+        <div class="modal__inner">
+            <div class="modal__content menu">
+                <a href="#" class="menu__header">
+                    <div class="menu__profile-img icon-profile" style="background-image: url(./img/profile.jpg);">
+                    </div>
+                    <div class="menu__profile-about">
+                        <div class="menu__profile-name">
+                            Умурзаков Темирлан
+                        </div>
+                        <div class="menu__profile-type">
+                            Эксперт
+                        </div>
+                    </div>
+                </a>
+                <div class="menu__place">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                        <use xlink:href="img/icons/sprite.svg#place"></use>
+                    </svg> Казахстан, Нур-Султан
+                </div>
+                <div class="menu__nav">
+                    <ul class="menu__list">
+                        <li class="menu__item active"><a class="menu__link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                    <use xlink:href="img/icons/sprite.svg#my-marks"></use>
+                                </svg>Мои заявки</a></li>
+                        <li class="menu__item"><a class="menu__link " href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon">
+                                    <use xlink:href="img/icons/sprite.svg#notify"></use>
+                                </svg>Уведомления <span class="menu__notify">7</span></a></li>
+                        <li class="menu__item"><a class="menu__link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon">
+                                    <use xlink:href="img/icons/sprite.svg#info"></use>
+                                </svg>Информация</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon">
+                                    <use xlink:href="img/icons/sprite.svg#find-worker"></use>
+                                </svg>Найти специалиста</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon">
+                                    <use xlink:href="img/icons/sprite.svg#settings"></use>
+                                </svg>Настройки</a></li>
+                    </ul>
+                </div>
+                <div class="menu__log-out">
+                    <button class="btn">
+                        Выйти
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- comments -->
+    <div class="modal bottom modal--half" id="comment">
+        <div class="modal__inner">
+            <div class="modal__content comment">
+                <div class="comment__header">
+                    <div class="comment__count">
+                        <span>8</span>комментариев
+                    </div>
+                    <div class="comment__close">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                            <use xlink:href="img/icons/sprite.svg#close" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="comment__body">
+                    <div class="comment__item">
+                        <div class="comment__avatar">
+                            <img src="img/comment-avatar.jpg" alt="YT">
+                        </div>
+                        <div class="comment__name">
+                            Умурзаков Темирлан
+                        </div>
+                        <div class="comment__text">
+                            Шикарная квартира, месторасположение идеально
+                            для семейных пар. В ипотеку можно ли?
+                        </div>
+                        <div class="comment-actions">
+                            <button class="btn btn-comment btn-comment--respond">
+                                Ответить
+                            </button>
+                            <button class="btn btn-comment btn-comment--remove">
+                                Удалить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="comment__item">
+                        <div class="comment__avatar">
+                            <img src="img/comment-avatar.jpg" alt="YT">
+                        </div>
+                        <div class="comment__name">
+                            Юрий Громов
+                        </div>
+                        <div class="comment__text">
+                            Чуть-чуть надо переделать дизайн интерьера, а так
+                            все круто
+                        </div>
+                        <div class="comment-actions">
+                            <button class="btn btn-comment btn-comment--respond">
+                                Ответить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="comment__item comment__item--respond">
+                        <div class="comment__avatar">
+                            <img src="img/comment-avatar.jpg" alt="YT">
+                        </div>
+                        <div class="comment__name">
+                            Мирас Ерлан
+                        </div>
+                        <div class="comment__text">
+                            А что именно хотели бы переделать?
+                        </div>
+                        <div class="comment-actions">
+                            <button class="btn btn-comment btn-comment--respond">
+                                Ответить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="comment__item comment__item--respond">
+                        <div class="comment__avatar">
+                            <img src="img/comment-avatar.jpg" alt="YT">
+                        </div>
+                        <div class="comment__name">
+                            Юрий Громов
+                        </div>
+                        <div class="comment__text">
+                            Мне не нравится цвет стен в гостиной, и мебель
+                            в спальной
+                        </div>
+                        <div class="comment-actions">
+                            <button class="btn btn-comment btn-comment--respond">
+                                Ответить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="comment__item">
+                        <div class="comment__avatar">
+                            <img src="img/comment-avatar.jpg" alt="YT">
+                        </div>
+                        <div class="comment__name">
+                            Умурзаков Темирлан
+                        </div>
+                        <div class="comment__text">
+                            Шикарная квартира, месторасположение идеально
+                            для семейных пар. В ипотеку можно ли?
+                        </div>
+                        <div class="comment-actions">
+                            <button class="btn btn-comment btn-comment--respond">
+                                Ответить
+                            </button>
+                            <button class="btn btn-comment btn-comment--remove">
+                                Удалить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment__input">
+                    <form action="#" method="post">
+                        <textarea tabindex="-1" name="comment-input" placeholder="Добавить комментарий..."
+                            maxlength="999"></textarea>
+                        <button class="btn comment__input-submit" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                <use xlink:href="img/icons/sprite.svg#send" />
+                            </svg>
+                        </button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <div class="orientation">
-        <div class="loader-hi">
-            Поверните обратно для лучшего просмотра))
+    <!-- share -->
+    <div class="modal bottom modal--half" id="share">
+        <div class="modal__inner">
+            <div class="modal__content share">
+                <div class="share-title">
+                    Отправка данных
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about object -->
+    <div class="modal active" id="about">
+        <div class="modal__inner">
+            <div class="modal__content about">
+                <div class="about-header">
+                    <div class="about-closer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                            <use xlink:href="img/icons/sprite.svg#go-back" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="about-images" id="lightgallery" lg-uid="lg0">
+                    <a href="img/object-1.jpg" class="about-img">
+                        <img src="img/object-1.jpg" alt="object">
+                    </a>
+                    <a href="img/object-2.jpg" class="about-img">
+                        <img src="img/object-2.jpg" alt="object">
+                    </a>
+                    <a href="img/object-3.jpg" class="about-img">
+                        <img src="img/object-3.jpg" alt="object">
+                    </a>
+                </div>
+                <div class="about-character">
+                    <div class="object-about">
+                        <div class="object-name object-about__item">
+                            ЖК Ботанический
+                        </div>
+                        <div class="object-price object-about__item">
+                            67 800 000 тг
+                        </div>
+                        <div class="object-descr object-about__item">
+                            4-комнатная квартира • 4 из 9 • 127 м²
+                        </div>
+                    </div>
+                    <div class="about-actions">
+                        <button class="btn btn--action btn--like"><svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg></button>
+                        <button class="btn btn--action btn--share" data-toggle="action" data-target="share">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-share">
+                                <use xlink:href="img/icons/sprite.svg#share"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="about-place">
+                        <span>Нур-Султан, Есильский район <br>ул. Сауран, 18</span>
+                        <div class="about-type">Бизнес класс</div>
+                    </div>
+                </div>
+                <ul class="about-list">
+                    <li> <span>Количество комнат</span> <span>7</span> </li>
+                    <li> <span>Площадь</span> <span>180 м2</span> </li>
+                    <li> <span>Этаж</span> <span> 2 из 5</span> </li>
+                    <li> <span>Состояние</span> <span>Евроремонт</span> </li>
+                    <li> <span>Потолки</span> <span>3 м</span> </li>
+                    <li> <span>Санузел</span> <span>Раздельный</span> </li>
+                    <li> <span>Год постройки</span> <span>2014</span> </li>
+                </ul>
+                <div class="open-additional-about open-additional">
+                    <span>Показать больше</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-down">
+                        <use xlink:href="img/icons/sprite.svg#arrow" />
+                    </svg>
+                </div>
+                <div class="about-additionals">
+                    <div class="about-btn-group">
+                        <a href="tel:+22" class="btn btn--link btn--primary">Позвонить</a>
+                        <a href="#" class="btn btn--link btn--dark" data-toggle="action"
+                            data-target="sign-in">Записаться
+                            на показ</a>
+                    </div>
+                    <div class="about-descr">
+                        <h5 class="about-title">
+                            ОПИСАНИЕ
+                        </h5>
+                        <p>Расположен ЖК в престижном развивающемся районе. Рядом находится прекрасное место для отдыха
+                            и прогулок — Президентский парк, набережная реки Есиль. В шаговой доступности школа
+                            Haileybury Astana. В 10 минутах пешком Национальный музей, Дворец мира и согласия
+                            (Пирамида), Дворец независимости, казахский национальный университет</p>
+                    </div>
+                    <div class="about-tab">
+                        <div class="tab-nav tab-nav--four" role="tablist">
+                            <a href="#" class="tab-link active" data-toggle="tab" data-target="school">Школа</a>
+                            <a href="#" class="tab-link" data-toggle="tab" data-target="hospital">Больница</a>
+                            <a href="#" class="tab-link active" data-toggle="tab" data-target="child">Детский сад</a>
+                            <a href="#" class="tab-link" data-toggle="tab" data-target="trc">ТРЦ</a>
+                            <span></span>
+                        </div>
+                        <div class="tab-content">
+                            <div class="about-tab-content active" data-tab-content="school">
+                                <p>Школа-гимназия №75</p>
+                                <p>Мангилик Ел проспект, 28/1</p>
+                                <p>Haileybury Astana</p>
+                                <p>частная Британская школа</p>
+                            </div>
+                            <div class="about-tab-content" data-tab-content="hospital">
+                                a
+                            </div>
+                            <div class="about-tab-content" data-tab-content="child">
+                                sas
+                            </div>
+                            <div class="about-tab-content" data-tab-content="trc">
+                                s
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-rate">
+                        <h5 class="about-title">
+                            РЕЙТИНГ ЛОКАЛИЗАЦИИ
+                        </h5>
+                        <ul class="about-rate-list">
+                            <li><span>Рейтинг района</span> <span>95%</span></li>
+                            <li><span>Рейтинг ЖК</span> <span>81%</span></li>
+                        </ul>
+                    </div>
+                    <div class="about-comment" data-toggle="action" data-target="comment">
+                        <button class="about-comment-btn btn btn--action btn--comment">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-comment">
+                                <use xlink:href="img/icons/sprite.svg#comment-2" />
+                            </svg>
+                        </button>
+                        <span class="about-comment-count">
+                            15
+                        </span>
+                        <span>• Показать комментарии</span>
+                    </div>
+                    
+                </div>
+            </div>
         </div>
     </div>
     <script src="js/swiper-bundle.min.js"></script>

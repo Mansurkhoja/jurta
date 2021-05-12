@@ -117,15 +117,7 @@
 }
 .video-more__link {
     &.btn {
-        background-color: $orange;
-        font-size: 18px;
-        padding: 4px 14px;
-        //border: 1px solid $orange;
-        &:hover,
-        &:focus {
-            color: $orange;
-            background-color: $base-light;
-        }
+      
     }
 }
 .video-share {

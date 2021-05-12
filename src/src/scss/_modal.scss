@@ -27,19 +27,57 @@
         display: block;
     }
     &.right {
+        .modal__inner {
+            overflow: hidden;
+        }
         .modal__content {
             max-width: 500px;
             margin-left: auto;
-          
-            
             width: calc(100% - 40px);
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+    }
+    &--half {
+        &.active {
+            display: flex;
+        }
+        .modal__inner {
+            overflow: hidden;
+            height: 80%;
+            margin-top: auto;
+        }
+        .modal__content {
+            height: 100%;
+        }
+    }
+    &--full {
+        height: calc(100% - 65px);
+        .modal__inner {
+            overflow: hidden;
+        }
+        .modal__content {
+            height: 100%;
+        }
+    }
+    &--tab {
+        .tab-content {
+            height: calc(100% - 50px);
+            overflow-x: hidden;
+            overflow-y: auto;
+            margin-right: -15px;
+            margin-left: -15px;
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
 }
-.modal__content{
-      padding-left: 15px;
-            padding-right: 15px;height: 100%;
-            background-color: $base-light;
+.modal__content {
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 100%;
+    background-color: $modal-content-bg;
 }
 .modal__inner {
     max-width: 720px;

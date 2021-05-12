@@ -4,6 +4,7 @@
         cursor: pointer;
         user-select: none;
         span {
+            line-height: 24px;
             color: #333333;
             max-width: calc(100% - 64px);
             display: inline-block;
@@ -16,10 +17,11 @@
             position: absolute;
         }
         &::after {
-            top: calc(50% - 11px);
+            top: 50%;
             right: 42px;
             width: 22px;
             height: 22px;
+            transform: translateY(-50%);
             // margin: auto 4px;
             background-color: #333333;
             //box-shadow: 0px 1px 2px 0px red;
@@ -29,7 +31,9 @@
         }
         &::before {
             right: 20px;
-            top: calc(50% - 5.5px);
+            // top: calc(50% - 5.5px);
+            top: 50%;
+            transform: translateY(-50%);
             width: 44px;
             height: 11px;
             background-color: rgba($color: #333333, $alpha: 0.25);
@@ -40,7 +44,7 @@
     &:checked {
         + label {
             &::after {
-                transform: translateX(22px);
+                transform: translate(22px, -50%);
                 background-color: $orange;
             }
             &::before {
@@ -53,7 +57,7 @@
     position: relative;
     background-color: #ffffff;
     //height: 50px;
-    border: 1px solid #ffffff;
+    border: 1px solid #dbdbdb;
     border-radius: 10px;
     outline: 0;
     outline: none;
@@ -61,7 +65,7 @@
     display: block;
     appearance: none;
     width: 100%;
-    padding: 14px 20px;
+    padding: 12px 15px;
     font-size: 20px;
     font-weight: $font-medium;
     line-height: 1;
@@ -72,12 +76,11 @@
         font-weight: $font-medium;
         color: rgba($color: #333333, $alpha: 0.4);
     }
-    &:focus {
-        outline: none;
-    }
-    &:hover {
+
+    &:hover,&:focus {
         background-color: #ececec;
         border-color: #ececec;
+        outline: none;
     }
 }
 .drop-select {
@@ -92,6 +95,10 @@
 .choice {
     display: none;
     & + label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
         text-align: center;
         border-radius: 10px 0 0 10px;
         cursor: pointer;

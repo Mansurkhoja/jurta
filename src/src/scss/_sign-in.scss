@@ -1,19 +1,13 @@
 
-
-.sign-in-modal {
+#sign-in{
     z-index: 10;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: none;
-    transform: translateY(100%);
-    overflow: hidden;
-    &.active {
-        visibility: visible;
-        display: flex;
-        animation: showSignin 0.25s ease-in 0s 1 forwards;
-        background-color: rgba($color: $dark-blue, $alpha: 0.89);
+    .modal__inner{
+     text-align: center;
     }
+}
+
+.sign-in {
+  display: inline-block;
 }
 @keyframes showSignin {
     0% {
@@ -35,13 +29,8 @@
     overflow: hidden;
     display: inline-block;
     touch-action: manipulation;
-    // transform: translateY(100%);
-    //transition: transform .2s ease-in;
+  
 }
-// .sign-in-modal.active .sign-in-modal__inner {
-//     transform: translateY(0);
-//     transition: transform .4s linear;
-// }
 .sign-in-title {
     margin: 0;
     font-size: 22px;

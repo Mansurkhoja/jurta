@@ -27,10 +27,12 @@
         max-height: 36px;
     }
     .video-action {
-        right: 10px;
+        right: 11.5px;
     }
-    .video-more,.video-profile  {
-        right: 5px;}
+    .video-more,
+    .video-profile {
+        right: 5px;
+    }
     //footer
     .footer {
         height: 55px;
@@ -42,8 +44,59 @@
             margin-bottom: 6px;
         }
     }
+    //modals
+    .modal--full {
+        height: calc(100% - 55px);
+    }
+
+    //tabs
+    .tab-link {
+        font-size: 12px;
+    }
+    //objects
+    .object-img {
+        height: 320px;
+        max-width: 300px;
+    }
+    .object-name,
+    .object-price {
+        font-weight: 700;
+        font-size: 16px;
+    }
+    .object-about .object-about__item {
+        margin-top: 6px;
+    }
+    .object-descr {
+        font-size: 13px;
+    }
+    .saved-object-text {
+        font-size: 18px;
+    }
+     //comment
+     .comment__item {
+        font-size: 16px;
+    }
+    .comment__input{
+        textarea{
+            padding: 18px 32px 8px 8px;
+            font-size: 16px;
+            &::placeholder{
+                font-size: 16px;
+            }
+        }
+    }
+    .comment__input-submit{
+        font-size: 30px;
+        padding: 0;
+    }
 }
 @media screen and (max-width: 400px) {
+    .btn{
+        font-size: 20px;
+    }
+    .btn-comment {
+        font-size: 18px;
+    }
     //header
     .navbar__filter {
         font-size: 16px;
@@ -65,7 +118,6 @@
     }
     .video-text .btn {
         font-size: 14px;
-        padding-bottom: 5px;
     }
     .video-descr,
     .video-place {
@@ -73,19 +125,19 @@
         max-height: 32px;
     }
     .video-action {
-      //  right: 10px;
+        //  right: 10px;
         width: 30px;
         height: 30px;
         bottom: 5px;
     }
     .video-more {
-       // right: 5px;
+        // right: 5px;
         width: auto;
         height: auto;
     }
-    .video-more__link.btn {
+    .btn--more {
         font-size: 14px;
-        padding: 3px 12px 2px;
+        padding: 3px 12px;
     }
     .btn--action {
         font-size: 30px;
@@ -127,10 +179,84 @@
     .footer__item--add .footer__link img {
         width: 40px;
     }
+    //modals
+    .modal--full {
+        height: calc(100% - 41px);
+    }
+    //objects
+    .saved-object-item {
+        padding: 10px 15px;
+    }
+    //form
+    .form-title {
+        font-size: 16px;
+    }
+    .custom-input {
+        font-size: 16px;
+        &::placeholder {
+            font-size: 16px;
+        }
+    }
+    .toggle-input + label::before {
+        height: 8px;
+        width: 28px;
+    }
+    .toggle-input + label::after {
+        right: 42px;
+        width: 18px;
+        height: 18px;
+    }
+    .search__additional {
+        font-size: 18px;
+    }
+   //comments
+   .comment__input-submit{
+    font-size: 30px;
+}
+.comment__avatar{
+    width: 40px;
+    height: 40px;
+    top: 8px;
+    left: 8px;
+}
+.comment__item{
+    padding: 8px 10px 8px 60px;
+}
 }
 @media screen and (max-width: 320px) {
-    .video-place{
+    .video-place {
         margin-right: 30px;
+    }
+    .menu__list {
+        padding: 0 0 0 10px;
+    }
+    .menu__item {
+        margin-bottom: 15px;
+    }
+    .menu__link {
+        font-size: 18px;
+    }
+    .menu__link .icon {
+        font-size: 22px;
+    }
+    .menu__notify {
+        font-size: 10px;
+    }
+    .menu__profile-name {
+        margin-bottom: 8px;
+        font-size: 18px;
+    }
+    //tabs
+    .tab-link {
+        font-size: 11px;
+    }
+    //objects
+    .objects {
+        flex-direction: column;
+    }
+    .object-item {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
 @media screen and (max-height: 560px) {
