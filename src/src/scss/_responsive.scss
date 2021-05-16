@@ -97,6 +97,16 @@
     .btn-comment {
         font-size: 18px;
     }
+    .btn--more {
+        font-size: 14px;
+        padding: 4px 10px;
+    }
+    .btn--action {
+        font-size: 30px;
+    }
+    .btn--play{
+        font-size: 35px;
+    }
     //header
     .navbar__filter {
         font-size: 16px;
@@ -135,13 +145,7 @@
         width: auto;
         height: auto;
     }
-    .btn--more {
-        font-size: 14px;
-        padding: 3px 12px;
-    }
-    .btn--action {
-        font-size: 30px;
-    }
+  
     .video-share {
         bottom: 50px;
     }
@@ -260,9 +264,9 @@
     }
 }
 @media screen and (max-height: 560px) {
-    .sign-in-modal__inner {
-        padding: 1px 40px;
-    }
+    // .sign-in-modal__inner {
+    //     padding: 1px 40px;
+    // }
     .sign-in-sub-title {
         margin: 8px 0 10px;
     }

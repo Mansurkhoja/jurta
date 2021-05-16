@@ -11,13 +11,14 @@
     border: none;
     border-radius: $base-radius;
     font-weight: $font-roman;
+    //font-weight: 700;
     font-size: 25px;
     line-height: 1.15;
     position: relative;
-    overflow: hidden;
+   // overflow: hidden;
     outline: none;
     transition: all 0.19s ease-out;
-    user-select: none;
+    //user-select: none;
     &:hover,
     &:focus,
     &:active {
@@ -29,7 +30,7 @@
     }
     &--link {
         border-radius: 25px;
-        padding: 7px 14px;
+        padding: 6px 14px;
         &.btn--primary{
             text-transform: none;
         }
