@@ -12,7 +12,7 @@
     border-radius: $base-radius;
     font-weight: $font-roman;
     //font-weight: 700;
-    font-size: 25px;
+    font-size: 23px;
     line-height: 1.15;
     position: relative;
    // overflow: hidden;
@@ -31,9 +31,7 @@
     &--link {
         border-radius: 25px;
         padding: 6px 14px;
-        &.btn--primary{
-            text-transform: none;
-        }
+        font-size: 20px;
     }
     &--more{
         background-color: $orange;

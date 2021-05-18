@@ -38,6 +38,7 @@ body {
 }
 ::-webkit-scrollbar {
     width: 0 !important;
+    height: 0 !important;
     background: transparent;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -115,6 +116,7 @@ p {
     min-width: 280px;
     &::-webkit-scrollbar {
         width: 0 !important;
+        height: 0 !important;
         display: none;
     }
 }

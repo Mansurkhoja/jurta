@@ -9,7 +9,7 @@
         }
     }
     //main
-    .main-container {
+    .full-height {
         height: calc(100vh - 55px);
         height: calc((var(--vh, 1vh) * 100) - 55px);
     }
@@ -72,26 +72,39 @@
     .saved-object-text {
         font-size: 18px;
     }
-     //comment
-     .comment__item {
+    //comment
+    .comment__item {
         font-size: 16px;
     }
-    .comment__input{
-        textarea{
-            padding: 18px 32px 8px 8px;
+    .comment__input {
+        textarea {
+            padding: 8px 45px 8px 8px;
             font-size: 16px;
-            &::placeholder{
+            &::placeholder {
                 font-size: 16px;
             }
         }
     }
-    .comment__input-submit{
+    .comment__input-submit {
         font-size: 30px;
         padding: 0;
+        right: -5px;
+    }
+    //about
+    .about-btn-group {
+        flex-direction: column;
+        .btn {
+            margin-top: 10px;
+            flex: 0 0 100%;
+            max-width: 100%;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
     }
 }
 @media screen and (max-width: 400px) {
-    .btn{
+    .btn {
         font-size: 20px;
     }
     .btn-comment {
@@ -104,7 +117,7 @@
     .btn--action {
         font-size: 30px;
     }
-    .btn--play{
+    .btn--play {
         font-size: 35px;
     }
     //header
@@ -115,7 +128,7 @@
         }
     }
     //main
-    .main-container {
+    .full-height {
         height: calc(100vh - 41px);
         height: calc((var(--vh, 1vh) * 100) - 41px);
     }
@@ -145,7 +158,7 @@
         width: auto;
         height: auto;
     }
-  
+
     .video-share {
         bottom: 50px;
     }
@@ -213,19 +226,101 @@
     .search__additional {
         font-size: 18px;
     }
-   //comments
-   .comment__input-submit{
-    font-size: 30px;
-}
-.comment__avatar{
-    width: 40px;
-    height: 40px;
-    top: 8px;
-    left: 8px;
-}
-.comment__item{
-    padding: 8px 10px 8px 60px;
-}
+    //comments
+    .comment__input-submit {
+        font-size: 30px;
+    }
+    .comment__avatar {
+        width: 40px;
+        height: 40px;
+        top: 8px;
+        left: 8px;
+    }
+    .comment__item {
+        padding: 8px 10px 8px 60px;
+    }
+    //about
+    .about-title {
+        font-size: 16px;
+    }
+    .about-descr {
+        font-size: 14px;
+    }
+    .about-character .object-about {
+        margin-top: 0;
+    }
+    .about-actions {
+        margin-top: 4px;
+    }
+    .about-place span {
+        font-size: 17px;
+    }
+    .about-type {
+        font-size: 16px;
+    }
+    .about-list li span {
+        font-size: 16px;
+    }
+    .about-comment {
+        font-size: 17px;
+    }
+    .about-mortgage {
+        font-size: 16px;
+        padding: 15px;
+    }
+    .about-book {
+        padding: 20px 15px;
+    }
+    .about-book-text {
+        font-size: 16px;
+    }
+    .about-book-text .icon {
+        font-size: 30px;
+    }
+    .open-additional {
+        font-size: 18px;
+    }
+    //offer
+    .offers-title {
+        font-size: 16px;
+    }
+    //profile
+    .profile__awards-item {
+        max-width: 31%;
+        flex: 0 0 31%;
+    }
+    .profile__name {
+        font-size: 20px;
+    }
+    .profile__avatar-counts {
+        font-size: 12px;
+    }
+    .profile__avatar {
+        width: 140px;
+        height: 140px;
+    }
+    .profile__inner {
+        padding-top: 70px;
+    }
+    .profile__name span {
+        font-size: 10px;
+    }
+    .profile__advance {
+        font-size: 14px;
+    }
+    .profile__title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .profile__about {
+        font-size: 16px;
+    }
+    .profile__awards-name {
+        font-size: 14px;
+    }
+    .profile__awards-count {
+        font-size: 9px;
+    }
 }
 @media screen and (max-width: 320px) {
     .video-place {
@@ -262,39 +357,22 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
+    //comment
+    .comment__header {
+        font-size: 18px;
+        padding: 8px 38px 8px 8px;
+    }
+    .comment__item {
+        font-size: 14px;
+    }
+    .btn-comment {
+        font-size: 16px;
+    }
 }
 @media screen and (max-height: 560px) {
-    // .sign-in-modal__inner {
-    //     padding: 1px 40px;
-    // }
-    .sign-in-sub-title {
-        margin: 8px 0 10px;
-    }
-    .mtr-datepicker .mtr-input-slider {
-        margin: 0px 6px;
-    }
-    .datepicker-controls .button.view-switch {
-        height: 1.75em;
-    }
-    .datepicker-cell,
-    .datepicker-view .week {
-        height: 1.75rem;
-        line-height: 1.75rem;
-    }
-    .datepicker-view.datepicker-grid .datepicker-cell {
-        height: 4rem;
-        line-height: 4rem;
-    }
-    .btn--text {
-        font-size: 18px;
-        padding: 6px 12px;
-    }
     .orientation.changed {
         display: block;
     }
 }
 @media (hover: none) {
-    .mtr-input {
-        display: none !important;
-    }
 }

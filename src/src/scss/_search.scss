@@ -66,7 +66,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin: 10px 0 15px;
 }
 .offers-title {
     font-size: 20px;
@@ -76,10 +76,11 @@
 }
 .offers-count {
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 550;
     padding: 2px 10px;
     border-radius: 12px;
     background-color: $orange;
+    color: $base-light;
 }
 .offers-items {
     display: flex;
@@ -172,6 +173,7 @@
     display: inline-flex;
     align-items: center;
     cursor: pointer;
+    text-transform: uppercase;
     span {
         margin-right: 10px;
     }

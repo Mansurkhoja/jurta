@@ -37,16 +37,20 @@ const modalToggle = document.querySelectorAll('[data-toggle="modal"]');
 const firstVideo = document.querySelector('.first-video');
 const tabToggle = document.querySelectorAll('[data-toggle="tab"]');
 const tabContent = document.querySelectorAll('[data-tab-content]');
-const objectLiked = document.querySelectorAll('.object-heart');
-const searchAdditionalOpener = document.querySelector(
-	'.open-additional-search'
-);
+const additionalOpener = document.querySelectorAll('.open-additional');
 const search = document.querySelector('.search');
 const searchResult = document.querySelector('.search-result');
 const searchSubmit = document.querySelector('.search-submit');
 const searchResultHide = document.querySelector('.search-result-hide');
 const actionToggle = document.querySelectorAll('[data-toggle="action"]');
 const commentClose = document.querySelector('.comment__close');
+const closer = document.querySelectorAll('[data-close]');
+//book vars
+const bookHeader = document.querySelector('.book__header');
+const bookDays = document.querySelector('.book__days');
+const bookTimes = document.querySelector('.book__times');
+const btnLike = document.querySelectorAll('.btn-like');
+const pageProfile = document.querySelector('#page-profile');
 document.addEventListener('DOMContentLoaded', function () {
 	//loader
 	loaderClose.addEventListener('click', function () {
@@ -124,7 +128,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		this.classList.add('active');
 		removeToggleActive();
 		closeModals();
-		swiperVideo.slideTo(0);
+		if (firstVideo.classList.contains('.active')) {
+			swiperVideo.slideTo(0);
+		}
 	});
 	modalToggle.forEach((modalToggleEl) => {
 		modalToggleEl.addEventListener(
@@ -134,22 +140,28 @@ document.addEventListener('DOMContentLoaded', function () {
 				closeModals();
 				removeToggleActive();
 				firstVideo.classList.remove('active');
-				const modalToggle = document.querySelectorAll(
-					`[data-target="${modalToggleEl.getAttribute('data-target')}"]`
-				);
-				modalToggle.forEach((el) => {
-					el.classList.add('active');
-				});
-				//var modalToggleTarget = modalToggleEl.getAttribute('data-target');
-				var modalTargetId = document.getElementById(
-					modalToggleEl.getAttribute('data-target')
-				);
-				modalTargetId.classList.add('active');
+				if (modalToggleEl.hasAttribute('data-target')) {
+					const modalToggle = document.querySelectorAll(
+						`[data-target="${modalToggleEl.getAttribute('data-target')}"]`
+					);
+					modalToggle.forEach((el) => {
+						el.classList.add('active');
+					});
+					var modalTargetId = document.getElementById(
+						modalToggleEl.getAttribute('data-target')
+					);
+					modalTargetId.classList.add('active');
+				}
+
+				if (modalToggleEl.hasAttribute('data-profile')) {
+					const profileTarget = this.getAttribute('data-profile');
+					pageProfile.setAttribute('data-active', profileTarget);
+					pageProfile.classList.add('active');
+				}
 			},
 			false
 		);
 	});
-
 	modals.forEach((el) => {
 		el.addEventListener('click', function (e) {
 			const modalToggle = document.querySelectorAll(
@@ -191,17 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 		});
 	});
-	//objectLiked
-	objectLiked.forEach((el) => {
-		el.addEventListener('click', function () {
-			this.classList.toggle('liked');
-		});
-	});
 	//search
-	searchAdditionalOpener.addEventListener('click', function () {
-		this.classList.toggle('opened');
-		this.parentElement.classList.toggle('active');
-	});
 	searchSubmit.addEventListener('click', function (e) {
 		e.preventDefault();
 		search.classList.remove('active');
@@ -212,16 +214,53 @@ document.addEventListener('DOMContentLoaded', function () {
 		search.classList.add('active');
 		searchResult.classList.remove('active');
 	});
+	//additionalOpener
+	additionalOpener.forEach((el) => {
+		el.addEventListener('click', function () {
+			this.classList.toggle('opened');
+			this.parentElement.classList.toggle('active');
+		});
+	});
 	//action
 	actionToggle.forEach((el) => {
 		el.addEventListener('click', function (e) {
 			e.preventDefault();
+			if (el.closest('.modal.pop-up')) {
+				el.closest('.modal').classList.remove('active');
+			}
+
 			var actionTarget = el.getAttribute('data-target');
 			document.getElementById(actionTarget).classList.add('active');
 		});
 	});
-	commentClose.addEventListener('click', function () {
-		document.querySelector('#comment').classList.remove('active');
+
+	//closer modal pop-up
+	closer.forEach((el) => {
+		el.addEventListener('click', function () {
+			// var close = el.getAttribute('data-close');
+			// if (close === 'modal') {
+			// 	closeModals();
+			// }
+			// if (close === 'pop-up') {
+			// 	el.closest('.modal').classList.remove('active');
+			// }
+			el.closest('.modal').classList.remove('active');
+			if (!document.querySelector('.modal.active')) {
+				firstVideo.classList.add('active');
+			}
+		});
+	});
+	//book clicked
+	const bookTime = document.querySelectorAll('.book__time');
+	const bookDay = document.querySelectorAll('.book__day');
+	bookClicked(bookDay);
+	bookClicked(bookTime);
+	//like
+	btnLike.forEach((el) => {
+		el.addEventListener('click', function (e) {
+			e.preventDefault();
+			el.classList.toggle('liked');
+		});
 	});
 });
 
@@ -257,69 +296,125 @@ function closeTabContent() {
 		el.classList.remove('active');
 	});
 }
+//book
+const weeksShort = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+const weeks = [
+	'Понедельник',
+	'Вторник',
+	'Среда',
+	'Четверг',
+	'Пятница',
+	'Суббота',
+	'Воскресенье'
+];
+const months = [
+	'Январь',
+	'Февраль',
+	'Март',
+	'Апрель',
+	'Май',
+	'Июнь',
+	'Июль',
+	'Август',
+	'Сентябрь',
+	'Октябрь',
+	'Ноябрь',
+	'Декабрь'
+];
+//book title header
+function bookHeaderTitle() {
+	var today = new Date();
+	var month = today.getMonth();
+	var date = today.getDate();
+	var year = today.getFullYear();
+	var weekDay = today.getDay();
+	return `<span class="book__header-day">${date}</span><span class="book__header-month">${months[month]}</span>,<span class="book__header-year">${year}</span>•<span class="book__header-day-week">${weeks[weekDay]}</span>`;
+}
 
-//date
-Datepicker.locales.ru = {
-	daysMin: ['Вос', 'Пон', 'Вто', 'Сре', 'Чет', 'Пят', 'Суб'],
-	months: [
-		'Январь',
-		'Февраль',
-		'Март',
-		'Апрель',
-		'Май',
-		'Июнь',
-		'Июль',
-		'Август',
-		'Сентябрь',
-		'Октябрь',
-		'Ноябрь',
-		'Декабрь'
-	],
-	monthsShort: [
-		'Янв',
-		'Фев',
-		'Мар',
-		'Апр',
-		'Май',
-		'Июн',
-		'Июл',
-		'Авг',
-		'Сен',
-		'Окт',
-		'Ноя',
-		'Дек'
-	],
-	today: 'Сегодня',
-	clear: 'Очистить',
-	titleFormat: 'MM',
-	format: 'mm/dd/yyyy',
-	weekstart: 0
-};
-const datepicker = document.getElementById('sign-in-date');
-const date = new Datepicker(datepicker, {
-	nextArrow: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 24">
-	<path 
-		d="M.8232,23.9992a.871.871,0,0,1-.78034-.93947.99986.99986,0,0,1,.35986-.79295L13.72941,11.9992.40269,1.73154A1.06165,1.06165,0,0,1,.16894.43229.70483.70483,0,0,1,1.24228.1472L15.59722,11.207a1.06121,1.06121,0,0,1,.2371,1.29851.87807.87807,0,0,1-.2371.28588L1.24228,23.8512A.68353.68353,0,0,1,.8232,23.9992Z" />
-  </svg>`,
-	prevArrow: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 24">
-	<path
-		d="M15.1768.0008a.871.871,0,0,1,.78034.93947.99986.99986,0,0,1-.35986.79295L2.27059,12.0008,15.59731,22.26846a1.06165,1.06165,0,0,1,.23375,1.29925.70483.70483,0,0,1-1.07334.28509L.40278,12.793a1.06121,1.06121,0,0,1-.2371-1.29851.87807.87807,0,0,1,.2371-.28588L14.75772.1488A.68353.68353,0,0,1,15.1768.0008Z"/>
-  </svg>`,
-	disableTouchKeyboard: true,
-	minDate: new Date(2021, 0, 1),
-	maxDate: new Date(2031, 0, 1),
-	format: 'mm/dd/yyyy',
-	titleFormat: 'MM',
-	language: 'ru'
-});
-//time edit
-const configTime = {
-	target: 'sign-in-time',
-	datepicker: false,
-	animations: false,
-	disableAmPm: true,
-	minutes: {
-		step: 5
+bookHeader.innerHTML = bookHeaderTitle();
+//book days
+function formatDate(date) {
+	var dd = date.getDate();
+	if (dd < 10) {
+		dd = '0' + dd;
 	}
-};
-const time = new MtrDatepicker(configTime);
+	date = dd;
+	return date;
+}
+function bookDay(e) {
+	var result = [];
+	for (var i = 0; i < e; i++) {
+		var d = new Date();
+		d.setDate(d.getDate() + i);
+		var weekDays = d.getDay();
+		result.push(
+			`<div class="book__day" data-day="${formatDate(d)}" data-month="${
+				months[d.getMonth()]
+			}" data-year="${d.getFullYear()}" data-week="${weeks[weekDays]}">
+			<span>
+			${formatDate(d)}
+			</span>
+			<span>
+			${weeksShort[weekDays]}
+			</span>
+			</div>`
+		);
+	}
+	return result.join('');
+}
+
+bookDays.innerHTML = bookDay(14);
+//book times
+function bookTime() {
+	var times = [];
+	var timeInterval = ['00', '30'];
+	for (var i = 9; i < 21; i++) {
+		for (var s = 0; s < 2; s++) {
+			times.push(
+				`<div class="book__time"> 
+					 ${i + ':' + timeInterval[s]}
+				</div>`
+			);
+		}
+	}
+	return times.join('');
+}
+
+bookTimes.innerHTML = bookTime();
+//bookClicked
+function bookClicked(e) {
+	e.forEach((el) => {
+		el.addEventListener('click', function () {
+			if (!el.classList.contains('active')) {
+				e.forEach((el) => {
+					el.classList.remove('active');
+				});
+			}
+			if (el.classList.contains('book__day')) {
+				if (!el.classList.contains('active')) {
+					bookHeader.querySelector('.book__header-day').innerHTML =
+						el.getAttribute('data-day');
+					bookHeader.querySelector('.book__header-month').innerHTML =
+						el.getAttribute('data-month');
+					bookHeader.querySelector('.book__header-year').innerHTML =
+						el.getAttribute('data-year');
+					bookHeader.querySelector('.book__header-day-week').innerHTML =
+						el.getAttribute('data-week');
+				}
+				document.querySelector('.book__btn').classList.remove('disabled');
+			}
+			el.classList.add('active');
+		});
+	});
+}
+//lightgaller
+lightGallery(document.getElementById('lightgallery'), {
+	download: false,
+	slideEndAnimatoin: false,
+	counter: true,
+	enableDrag: true,
+	enableTouch: true,
+	cssEasing: 'ease',
+	//loop:false,
+	loop: true
+});

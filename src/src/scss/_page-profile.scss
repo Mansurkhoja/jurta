@@ -1,0 +1,196 @@
+.page-profile {
+    display: none;
+    color: $text-color;
+    .modal__content {
+        display: none;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-color: $base-light;
+    }
+    &.active {
+        display: block;
+        &[data-active="profile"] {
+            .profile {
+                display: block;
+            }
+        }
+    }
+}
+.page-profile__closer {
+    cursor: pointer;
+    font-size: 22px;
+    display: inline-block;
+    transition: color 0.19s linear;
+    &:hover {
+        color: rgba($color: $text-color, $alpha: 0.5);
+    }
+}
+//profile
+.profile {
+}
+.profile__closer {
+    padding-left: 15px;
+    color: $base-light;
+    transform: translateY(30px);
+}
+.profile__header {
+    margin: 0 -15px;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -22px;
+        left: 0;
+        width: 100%;
+        height: 44px;
+        background-color: $base-light;
+        border-radius: 22px;
+    }
+}
+.profile__avatar,
+.profile__header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.profile__avatar {
+    width: 180px;
+    height: 180px;
+    border: 4px solid $base-light;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    transform: translateY(calc(50% - 22px));
+    text-align: center;
+    &-counts {
+        display: inline-block;
+        color: $base-light;
+        padding: 4px 10px;
+        font-size: 16px;
+        font-weight: 550;
+        border-radius: 14px;
+        background-color: $blue-light;
+        margin-top: 100%;
+        transform: translateY(calc(-100% + 4px));
+    }
+}
+.profile__inner {
+    padding-top: 100px;
+}
+.profile__name {
+    text-align: center;
+    font-weight: 550;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    span {
+        display: inline-block;
+        background-color: $text-color;
+        font-size: 12px;
+        // vertical-align: middle;
+        color: $base-light;
+        padding: 4px 6px;
+        border-radius: 5px;
+        margin: 0 5px;
+    }
+}
+.profile__advance {
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 10px;
+    span {
+        margin: 0 5px;
+    }
+}
+.award-icon {
+    max-width: 49px;
+    width: 100%;
+    height: auto;
+}
+.profile__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    span {
+        display: inline-block;
+        padding: 6px 14px;
+        background-color: rgba($color: #e3e3e3, $alpha: 0.5);
+        border-radius: 10px;
+        text-align: center;
+    }
+    .btn,
+    span {
+        border-radius: 10px;
+        flex: 1 0 auto;
+        max-width: 100%;
+        min-width: 48%;
+        margin: 5px 1%;
+    }
+}
+.profile__about {
+    margin-top: 25px;
+
+    padding-bottom: 20px;
+}
+.profile__title {
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 14px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-color: $orange;
+        border-radius: 50%;
+        width: 6px;
+        height: 6px;
+    }
+}
+.profile__awards {
+    margin: 20px -15px;
+    padding: 20px 15px 0;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+}
+.profile__awards-items {
+    display: flex;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+}
+.profile__awards-item {
+    text-align: center;
+    max-width: 23%;
+    flex: 0 0 23%;
+    margin: 0 1%;
+}
+.profile__awards-icon {
+    margin-bottom: 5px;
+}
+.profile__awards-name {
+    font-weight: 550;
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+.profile__awards-count {
+    font-size: 10px;
+    font-weight: 700;
+    background-color: #eee;
+    border-radius: 50%;
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    line-height: 23px;
+}

@@ -26,7 +26,7 @@
         visibility: visible;
         display: block;
     }
-    &.right {
+    &--right {
         .modal__inner {
             overflow: hidden;
         }
@@ -72,6 +72,28 @@
             padding-right: 15px;
         }
     }
+    &--center {
+        background: rgba(232, 232, 232, 0.95);
+        .modal__inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .modal__content {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            max-height: 50%;
+            min-height: $minHeight;
+            max-width: 50%;
+            min-width: 278px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+    }
 }
 .modal__content {
     padding-left: 15px;
@@ -95,4 +117,7 @@
     100% {
         transform: translate(0);
     }
+}
+.pop-up{
+    z-index: 10;
 }

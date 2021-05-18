@@ -5,11 +5,13 @@
 .main-container {
     max-width: 720px;
     width: 100%;
+    margin: 0 auto;
+    background-color: $black;
+}
+.full-height{
     height: calc(100vh - 65px);
     height: $fullHeightFooter;
     min-height: $minHeight;
-    margin: 0 auto;
-    background-color: $black;
 }
 .main__item-inner {
     display: flex;
@@ -139,7 +141,7 @@
 .video-like {
     bottom: 192px;
 }
-.btn--like {
+.btn-like {
     &.liked {
         transform-origin: center;
         animation: liked 0.2s linear 0s 1 both;

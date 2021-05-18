@@ -3,9 +3,7 @@
 //     top: auto;
 //     bottom: 0;
 // }
-#comment{
-    z-index: 10;
-}
+
 .comment{
     border-radius: 25px 25px 0 0;
 }
@@ -93,7 +91,8 @@
 .comment__input {
     position: relative;
     form{
-        display: flex;
+        // display: flex;
+        margin: 0 -15px;
     }
     textarea {
         color: #949494;
@@ -107,7 +106,8 @@
         overflow: auto;
         margin: 0;
         line-height: 1;
-       height: 70px;
+       //height: 70px;
+       height: 75px;
         &::placeholder {
             color: #c0c0c0;
             font-size: 18px;
