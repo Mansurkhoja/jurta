@@ -9,7 +9,7 @@
     <title>Jurta Video Tour</title>
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/lightgallery.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -35,7 +35,7 @@
             </nav>
         </header>
         <main class="main">
-            <div class="main-container swiper-container">
+            <div class="main-container full-height swiper-container">
                 <div class="main__inner swiper-wrapper">
                     <div class="main__item swiper-slide">
                         <div class="main__item-inner">
@@ -47,7 +47,7 @@
                                 </button>
                             </div>
                             <div class="video-text">
-                                <a href="#" class="btn btn--link" data-toggle="action" data-target="sign-in">Записаться
+                                <a href="#" class="btn btn--link" data-toggle="action" data-target="book">Записаться
                                     на показ</a>
                                 <div class="video-text__item video-name">
                                     BI Village Deluxe, 290 500 000 ₸
@@ -73,7 +73,7 @@
                                 </a>
                             </div>
                             <div class="video-action video-like">
-                                <button class="btn btn--action btn--like">
+                                <button class="btn btn--action btn-like">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-like">
                                         <use xlink:href="img/icons/sprite.svg#like" />
                                     </svg>
@@ -94,7 +94,8 @@
                                 </button>
                             </div>
                             <div class="video-action video-more">
-                                <a href="#" class="video-more__link btn btn--link btn--more">Подробнее</a>
+                                <a href="#" class="video-more__link btn btn--link btn--more" data-toggle="action"
+                                    data-target="about">Подробнее</a>
                             </div>
                             <div class="video-container">
                                 <video src="video/video-1.mp4" loop muted playsinline webkit-playsinline="true"
@@ -112,7 +113,7 @@
                                 </button>
                             </div>
                             <div class="video-text">
-                                <a href="#" class="btn btn--link" data-toggle="action" data-target="sign-in">Записаться
+                                <a href="#" class="btn btn--link" data-toggle="action" data-target="book">Записаться
                                     на показ</a>
                                 <div class="video-text__item video-name">
                                     BI Village Deluxe, 290 500 000 ₸
@@ -138,7 +139,7 @@
                                 </a>
                             </div>
                             <div class="video-action video-like">
-                                <button class="btn btn--action btn--like">
+                                <button class="btn btn--action btn-like">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-like">
                                         <use xlink:href="img/icons/sprite.svg#like" />
                                     </svg>
@@ -159,7 +160,8 @@
                                 </button>
                             </div>
                             <div class="video-action video-more">
-                                <a href="#" class="video-more__link btn btn--link btn--more">Подробнее</a>
+                                <a href="#" class="video-more__link btn btn--link btn--more" data-toggle="action"
+                                    data-target="about">Подробнее</a>
                             </div>
                             <div class="video-container">
                                 <video src="video/video-1.mp4" loop muted playsinline webkit-playsinline="true"
@@ -170,9 +172,6 @@
                 </div>
             </div>
         </main>
-        <!-- <div class="page-profile">
-
-        </div> -->
         <footer class="footer">
             <ul class="footer__list container">
                 <li class="footer__item">
@@ -215,7 +214,7 @@
         </div>
     </div>
     <!-- filter -->
-    <div class="modal right" id="filter">
+    <div class="modal modal--right" id="filter">
         <div class="modal__inner">
             <div class="modal__content filter">
                 <form action="#" method="post">
@@ -301,26 +300,8 @@
             </div>
         </div>
     </div>
-    <!-- sign-in -->
-    <div class="modal bottom" id="sign-in">
-        <div class="modal__inner">
-            <div class="modal__content sign-in">
-                <h2 class="sign-in-title">
-                    Записаться на показ
-                </h2>
-                <form action="#" method="post">
-                    <label for="sign-in-date" class="sign-in-sub-title">Выберите дату:</label>
-                    <div id="sign-in-date" class="sign-in-input"></div>
-                    <label for="sign-in-time" class="sign-in-sub-title">Выберите время:</label>
-                    <div id="sign-in-time" class="sign-in-input"></div>
-                    <button class="btn btn--out" type="reset">Отмена</button>
-                    <button class="btn btn--primary" type="submit">Записаться</button>
-                </form>
-            </div>
-        </div>
-    </div>
     <!-- search -->
-    <div class="modal bottom modal--full modal--tab" id="search">
+    <div class="modal  modal--full modal--tab" id="search">
         <div class="modal__inner">
             <div class="modal__content search active">
                 <div class="search-form">
@@ -759,7 +740,7 @@
                     <div class="objects active" data-tab-content="search-list">
                         <div class="object-item">
                             <div class="object-img" style="background-image: url(./img/wish1.png);">
-                                <div class="object-heart liked">
+                                <div class="object-heart btn-like liked">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                                         <use xlink:href="img/icons/sprite.svg#like"></use>
                                     </svg>
@@ -778,8 +759,8 @@
                             </div>
                         </div>
                         <div class="object-item">
-                            <div class="object-img" style="background-image: url(./img/wish2.png);">
-                                <div class="object-heart liked">
+                            <div class="object-img" style="background-image: url(./img/wish2.webp);">
+                                <div class="object-heart btn-like liked">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                                         <use xlink:href="img/icons/sprite.svg#like"></use>
                                     </svg>
@@ -799,7 +780,7 @@
                         </div>
                         <div class="object-item">
                             <div class="object-img" style="background-image: url(./img/wish3.png);">
-                                <div class="object-heart liked">
+                                <div class="object-heart btn-like liked">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                                         <use xlink:href="img/icons/sprite.svg#like"></use>
                                     </svg>
@@ -819,7 +800,7 @@
                         </div>
                         <div class="object-item">
                             <div class="object-img" style="background-image: url(./img/wish4.png);">
-                                <div class="object-heart liked">
+                                <div class="object-heart btn-like liked">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                                         <use xlink:href="img/icons/sprite.svg#like"></use>
                                     </svg>
@@ -854,8 +835,67 @@
             </div>
         </div>
     </div>
+    <!-- book -->
+    <div class="modal modal--center pop-up" id="book">
+        <div class="modal__inner">
+            <div class="modal__content book">
+                <div class="book__header">
+                    <!-- <span class="book__header-day">
+                        6
+                    </span>
+                    <span class="book__header-month">
+                        апреля
+                    </span>,
+                    <span class="book__header-year">
+                        2020
+                    </span>•
+                    <span class="book__header-day-week">
+                        Понедельник
+                    </span> -->
+                </div>
+                <div class="book__days">
+                    <!-- <div class="book__day">
+                        <span>06</span>
+                        <span>ПН</span>
+                    </div> -->
+                </div>
+                <div class="book__times">
+                    <!-- <div class="book__time">09:00</div> -->
+                </div>
+                <div class="book__btn disabled">
+                    <button class="btn btn--primary" data-toggle="action" data-target="book-success">
+                        ЗАБРОНИРОВАТЬ
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal modal--center pop-up" id="book-success">
+        <div class="modal__inner">
+            <div class="modal__content book-success">
+                <div class="succes-img">
+                    <picture>
+                        <source srcset="img/success-jump.webp" type="image/webp">
+                        <source srcset="img/success-jump.png" type="image/png">
+                        <img src="img/success-jump.png" alt="Спасибо за обращение!">
+                    </picture>
+                </div>
+                <div class="succes-text">
+                    Для подтверждения времени показа
+                    в ближайшее время наши менеджеры
+                    свяжутся с Вами
+                    <span>Спасибо за обращение!</span>
+                </div>
+                <div class="succes-btn">
+                    <button class="btn btn--primary" data-close="pop-up">
+                        Ок
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- wishlist -->
-    <div class="modal bottom modal--full modal--tab" id="wishlist">
+    <div class="modal  modal--full modal--tab" id="wishlist">
         <div class="modal__inner">
             <div class="modal__content wishlist">
                 <div class="tab-nav" role="tablist">
@@ -867,7 +907,7 @@
                     <div class="objects active" data-tab-content="objects">
                         <div class="object-item">
                             <div class="object-img" style="background-image: url(./img/wish1.png);">
-                                <div class="object-heart liked">
+                                <div class="object-heart btn-like liked">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                                         <use xlink:href="img/icons/sprite.svg#like"></use>
                                     </svg>
@@ -886,8 +926,8 @@
                             </div>
                         </div>
                         <div class="object-item">
-                            <div class="object-img" style="background-image: url(./img/wish2.png);">
-                                <div class="object-heart liked">
+                            <div class="object-img" style="background-image: url(./img/wish2.webp);">
+                                <div class="object-heart btn-like liked">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                                         <use xlink:href="img/icons/sprite.svg#like"></use>
                                     </svg>
@@ -907,7 +947,7 @@
                         </div>
                         <div class="object-item">
                             <div class="object-img" style="background-image: url(./img/wish3.png);">
-                                <div class="object-heart liked">
+                                <div class="object-heart btn-like liked">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                                         <use xlink:href="img/icons/sprite.svg#like"></use>
                                     </svg>
@@ -927,7 +967,7 @@
                         </div>
                         <div class="object-item">
                             <div class="object-img" style="background-image: url(./img/wish4.png);">
-                                <div class="object-heart liked">
+                                <div class="object-heart btn-like liked">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                                         <use xlink:href="img/icons/sprite.svg#like"></use>
                                     </svg>
@@ -961,7 +1001,7 @@
                                 <div class="saved-object-name">
                                     2 комнатная для сестры
                                 </div>
-                                <div class="saved-object-heart object-heart liked">
+                                <div class="saved-object-heart object-heart btn-like liked">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                                         <use xlink:href="img/icons/sprite.svg#like"></use>
                                     </svg>
@@ -986,7 +1026,7 @@
                                 <div class="saved-object-name">
                                     2 комнатная для сестры
                                 </div>
-                                <div class="saved-object-heart object-heart liked">
+                                <div class="saved-object-heart btn-like object-heart liked">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                                         <use xlink:href="img/icons/sprite.svg#like"></use>
                                     </svg>
@@ -1011,7 +1051,7 @@
                                 <div class="saved-object-name">
                                     2 комнатная для сестры
                                 </div>
-                                <div class="saved-object-heart object-heart liked">
+                                <div class="saved-object-heart btn-like object-heart liked">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                                         <use xlink:href="img/icons/sprite.svg#like"></use>
                                     </svg>
@@ -1037,10 +1077,10 @@
         </div>
     </div>
     <!-- menu -->
-    <div class="modal right" id="menu">
+    <div class="modal modal--right" id="menu">
         <div class="modal__inner">
             <div class="modal__content menu">
-                <a href="#" class="menu__header">
+                <a href="#" class="menu__header" data-toggle="modal" data-profile="profile">
                     <div class="menu__profile-img icon-profile" style="background-image: url(./img/profile.jpg);">
                     </div>
                     <div class="menu__profile-about">
@@ -1059,24 +1099,29 @@
                 </div>
                 <div class="menu__nav">
                     <ul class="menu__list">
-                        <li class="menu__item active"><a class="menu__link" href="#">
+                        <li class="menu__item active"><a class="menu__link" href="#" data-toggle="modal"
+                                data-profile="application">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                                     <use xlink:href="img/icons/sprite.svg#my-marks"></use>
                                 </svg>Мои заявки</a></li>
-                        <li class="menu__item"><a class="menu__link " href="#"> <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="icon">
+                        <li class="menu__item"><a class="menu__link " href="#" data-toggle="modal"
+                                data-profile="notify">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                                     <use xlink:href="img/icons/sprite.svg#notify"></use>
                                 </svg>Уведомления <span class="menu__notify">7</span></a></li>
-                        <li class="menu__item"><a class="menu__link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="icon">
+                        <li class="menu__item"><a class="menu__link" href="#" data-toggle="modal"
+                                data-profile="information">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                                     <use xlink:href="img/icons/sprite.svg#info"></use>
                                 </svg>Информация</a></li>
-                        <li class="menu__item"><a class="menu__link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="icon">
+                        <li class="menu__item"><a class="menu__link" href="#" data-toggle="modal"
+                                data-profile="find-worker">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                                     <use xlink:href="img/icons/sprite.svg#find-worker"></use>
                                 </svg>Найти специалиста</a></li>
-                        <li class="menu__item"><a class="menu__link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="icon">
+                        <li class="menu__item"><a class="menu__link" href="#" data-toggle="modal"
+                                data-profile="settings">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                                     <use xlink:href="img/icons/sprite.svg#settings"></use>
                                 </svg>Настройки</a></li>
                     </ul>
@@ -1090,14 +1135,14 @@
         </div>
     </div>
     <!-- comments -->
-    <div class="modal bottom modal--half" id="comment">
+    <div class="modal modal--half pop-up" id="comment">
         <div class="modal__inner">
             <div class="modal__content comment">
                 <div class="comment__header">
                     <div class="comment__count">
                         <span>8</span>комментариев
                     </div>
-                    <div class="comment__close">
+                    <div class="comment__close" data-close="pop-up">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                             <use xlink:href="img/icons/sprite.svg#close" />
                         </svg>
@@ -1210,11 +1255,14 @@
         </div>
     </div>
     <!-- share -->
-    <div class="modal bottom modal--half" id="share">
+    <div class="modal modal--half pop-up" id="share">
         <div class="modal__inner">
             <div class="modal__content share">
-                <div class="share-title">
+                <div class="share__title">
                     Отправка данных
+                </div>
+                <div class="share__items">
+                    <a href="#" class="share__item"></a>
                 </div>
             </div>
         </div>
@@ -1224,13 +1272,13 @@
         <div class="modal__inner">
             <div class="modal__content about">
                 <div class="about-header">
-                    <div class="about-closer">
+                    <div class="about-closer" data-close="modal">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon">
                             <use xlink:href="img/icons/sprite.svg#go-back" />
                         </svg>
                     </div>
                 </div>
-                <div class="about-images" id="lightgallery" lg-uid="lg0">
+                <div class="about-images" id="lightgallery">
                     <a href="img/object-1.jpg" class="about-img">
                         <img src="img/object-1.jpg" alt="object">
                     </a>
@@ -1254,7 +1302,7 @@
                         </div>
                     </div>
                     <div class="about-actions">
-                        <button class="btn btn--action btn--like"><svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                        <button class="btn btn--action btn-like"><svg xmlns="http://www.w3.org/2000/svg" class="icon">
                                 <use xlink:href="img/icons/sprite.svg#heart"></use>
                             </svg></button>
                         <button class="btn btn--action btn--share" data-toggle="action" data-target="share">
@@ -1277,17 +1325,10 @@
                     <li> <span>Санузел</span> <span>Раздельный</span> </li>
                     <li> <span>Год постройки</span> <span>2014</span> </li>
                 </ul>
-                <div class="open-additional-about open-additional">
-                    <span>Показать больше</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-down">
-                        <use xlink:href="img/icons/sprite.svg#arrow" />
-                    </svg>
-                </div>
                 <div class="about-additionals">
                     <div class="about-btn-group">
                         <a href="tel:+22" class="btn btn--link btn--primary">Позвонить</a>
-                        <a href="#" class="btn btn--link btn--dark" data-toggle="action"
-                            data-target="sign-in">Записаться
+                        <a href="#" class="btn btn--link btn--dark" data-toggle="action" data-target="book">Записаться
                             на показ</a>
                     </div>
                     <div class="about-descr">
@@ -1303,7 +1344,7 @@
                         <div class="tab-nav tab-nav--four" role="tablist">
                             <a href="#" class="tab-link active" data-toggle="tab" data-target="school">Школа</a>
                             <a href="#" class="tab-link" data-toggle="tab" data-target="hospital">Больница</a>
-                            <a href="#" class="tab-link active" data-toggle="tab" data-target="child">Детский сад</a>
+                            <a href="#" class="tab-link" data-toggle="tab" data-target="child">Детский сад</a>
                             <a href="#" class="tab-link" data-toggle="tab" data-target="trc">ТРЦ</a>
                             <span></span>
                         </div>
@@ -1345,13 +1386,296 @@
                         </span>
                         <span>• Показать комментарии</span>
                     </div>
-                    
+                    <div class="about-calc">
+                        <h5 class="about-title">
+                            КРЕДИТНЫЙ КАЛЬКУЛЯТОР (ИПОТЕКА)
+                        </h5>
+                        <ul class="about-calc-list">
+                            <li><span>
+                                    Программа кредитования:
+                                </span>
+                                <span>
+                                    Орда
+                                </span>
+                            </li>
+                            <li><span>
+                                    Первоначальный взнос (₸):
+                                </span>
+                                <span>
+                                    2 000 000
+                                </span>
+                            </li>
+                            <li><span>
+                                    Срок кредитования (лет):
+                                </span>
+                                <span>
+                                    10
+                                </span>
+                            </li>
+                            <li><span>
+                                    Средний доход в месяц (₸):
+                                </span>
+                                <span>
+                                    450 000
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="about-mortgage">
+                        <span>Заполните ваши данные и запишитесь
+                            к нам на консультацию для подбора
+                            лучшей ипотечной программы
+                        </span>
+                        <button class="btn btn--link btn--primary">ИПОТЕКА ЗА 3 ДНЯ</button>
+                    </div>
+                    <div class="about-book">
+                        <h5 class="about-title">
+                            Забронировать объект
+                        </h5>
+                        <div class="about-book-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                                <use xlink:href="img/icons/sprite.svg#calendar" />
+                            </svg>
+                            <span>Забронируйте эту квартиру прямо сейчас
+                                чтобы купить её БЕЗ КОМИССИИ в 3 шага</span>
+                        </div>
+                        <button class="btn btn--link btn--dark" data-toggle="action" data-target="book">ЗАБРОНИРОВАТЬ
+                            ОБЪЕКТ</button>
+                    </div>
+                    <div class="offers">
+                        <div class="offers-header">
+                            <div class="offers-title">
+                                ПОХОЖИЕ ОБЪЕКТЫ
+                            </div>
+                            <div class="offers-count">
+                                158
+                            </div>
+                        </div>
+                        <div class="offers-items">
+                            <div class="offers-item">
+                                <div class="offers-img" style="background-image: url(./img/wish1.png);">
+                                </div>
+                                <div class="offers-about">
+                                    <div class="offers-name offers-about__item">
+                                        Байтурсынова 71
+                                    </div>
+                                    <div class="offers-descr offers-about__item">
+                                        3 комнатная • 6 из 8 • 101 м
+                                    </div>
+                                    <div class="offers-price offers-about__item">
+                                        51 500 000 ₸
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="open-additional-about open-additional">
+                    <span>Показать больше</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-down">
+                        <use xlink:href="img/icons/sprite.svg#arrow" />
+                    </svg>
                 </div>
             </div>
         </div>
     </div>
+    <!-- profile page -->
+    <div class="modal page-profile modal--full" id="page-profile" data-active="profile">
+        <div class="modal__inner page-profile__inner">
+            <div class="modal__content profile">
+                <div class="profile__header" style="background-image: url(./img/profile-bg.jpg);">
+                    <div class="profile__closer page-profile__closer" data-close="modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                            <use xlink:href="img/icons/sprite.svg#go-back" />
+                        </svg>
+                    </div>
+                    <div class="profile__avatar" style="background-image: url(./img/profile-main-avatar.jpg);">
+                        <div class="profile__avatar-counts">
+                            Сделки: 24
+                        </div>
+                    </div>
+                </div>
+                <div class="profile__inner">
+                    <div class="profile__name">Умурзаков Темирлан <span>1 год</span></div>
+                    <div class="profile__advance">
+                        <picture>
+                            <source srcset="img/award-icon.webp" type="image/webp">
+                            <source srcset="img/award-icon.png" type="image/png">
+                            <img src="img/award-icon.png" alt="Знаток Business" class="award-icon">
+                        </picture>
+                        <span>Знаток Business</span>
+                    </div>
+                    <div class="profile__actions">
+                        <a href="tel:+77028084580" class="btn btn--link btn--primary">+7 702 808 45 80 </a>
+                        <span>г. Нур-Султан</span>
+                    </div>
+                    <div class="profile__about">
+                        <div class="profile__title">О СЕБЕ</div>
+                        <p>
+                            Более 5 лет опыта в сфере купли-продажи недвижимости
+                            по всему Казахстану, более 1000 благодарных клиентов и 200 постоянных клиентов.
+                            Специализируюсь на продажах многокомнатных квартир и домов элит класса
+                        </p>
+                    </div>
+                    <div class="profile__awards">
+                        <div class="profile__title">Профессионализм</div>
+                        <div class="profile__awards-items">
+                            <div class="profile__awards-item">
+                                <div class="profile__awards-icon">
+                                    <picture>
+                                        <source srcset="img/award-icon.webp" type="image/webp">
+                                        <source srcset="img/award-icon.png" type="image/png">
+                                        <img src="img/award-icon.png" alt="Знаток Business" class="award-icon">
+                                    </picture>
+                                </div>
+                                <div class="profile__awards-name">
+                                    Сделка
+                                    за день
+                                </div>
+                                <div class="profile__awards-count">12</div>
+                            </div>
+                            <div class="profile__awards-item">
+                                <div class="profile__awards-icon">
+                                    <picture>
+                                        <source srcset="img/award-icon.webp" type="image/webp">
+                                        <source srcset="img/award-icon.png" type="image/png">
+                                        <img src="img/award-icon.png" alt="Знаток Business" class="award-icon">
+                                    </picture>
+                                </div>
+                                <div class="profile__awards-name">
+                                    Сделка
+                                    за день
+                                </div>
+                                <div class="profile__awards-count">12</div>
+                            </div>
+                            <div class="profile__awards-item">
+                                <div class="profile__awards-icon">
+                                    <picture>
+                                        <source srcset="img/award-icon.webp" type="image/webp">
+                                        <source srcset="img/award-icon.png" type="image/png">
+                                        <img src="img/award-icon.png" alt="Знаток Business" class="award-icon">
+                                    </picture>
+                                </div>
+                                <div class="profile__awards-name">
+                                    Сделка
+                                    за день
+                                </div>
+                                <div class="profile__awards-count">12</div>
+                            </div>
+                            <div class="profile__awards-item">
+                                <div class="profile__awards-icon">
+                                    <picture>
+                                        <source srcset="img/award-icon.webp" type="image/webp">
+                                        <source srcset="img/award-icon.png" type="image/png">
+                                        <img src="img/award-icon.png" alt="Знаток Business" class="award-icon">
+                                    </picture>
+                                </div>
+                                <div class="profile__awards-name">
+                                    Сделка
+                                    за день
+                                </div>
+                                <div class="profile__awards-count">12</div>
+                            </div>
+                            <div class="profile__awards-item">
+                                <div class="profile__awards-icon">
+                                    <picture>
+                                        <source srcset="img/award-icon.webp" type="image/webp">
+                                        <source srcset="img/award-icon.png" type="image/png">
+                                        <img src="img/award-icon.png" alt="Знаток Business" class="award-icon">
+                                    </picture>
+                                </div>
+                                <div class="profile__awards-name">
+                                    Сделка
+                                    за день
+                                </div>
+                                <div class="profile__awards-count">12</div>
+                            </div>
+                            <div class="profile__awards-item">
+                                <div class="profile__awards-icon">
+                                    <picture>
+                                        <source srcset="img/award-icon.webp" type="image/webp">
+                                        <source srcset="img/award-icon.png" type="image/png">
+                                        <img src="img/award-icon.png" alt="Знаток Business" class="award-icon">
+                                    </picture>
+                                </div>
+                                <div class="profile__awards-name">
+                                    Сделка
+                                    за день
+                                </div>
+                                <div class="profile__awards-count">12</div>
+                            </div>
+                        </div>
+                        <div class="profile__title">Оценка клиентов</div>
+                        <div class="profile__awards-items">
+                            <div class="profile__awards-item">
+                                <div class="profile__awards-icon">
+                                    <picture>
+                                        <source srcset="img/award-icon.webp" type="image/webp">
+                                        <source srcset="img/award-icon.png" type="image/png">
+                                        <img src="img/award-icon.png" alt="Знаток Business" class="award-icon">
+                                    </picture>
+                                </div>
+                                <div class="profile__awards-name">
+                                    Полезные
+                                    подборки
+                                </div>
+                                <div class="profile__awards-count">32</div>
+                            </div>
+                            <div class="profile__awards-item">
+                                <div class="profile__awards-icon">
+                                    <picture>
+                                        <source srcset="img/award-icon.webp" type="image/webp">
+                                        <source srcset="img/award-icon.png" type="image/png">
+                                        <img src="img/award-icon.png" alt="Знаток Business" class="award-icon">
+                                    </picture>
+                                </div>
+                                <div class="profile__awards-name">
+                                    Сделка
+                                    за день
+                                </div>
+                                <div class="profile__awards-count">12</div>
+                            </div>
+                            <div class="profile__awards-item">
+                                <div class="profile__awards-icon">
+                                    <picture>
+                                        <source srcset="img/award-icon.webp" type="image/webp">
+                                        <source srcset="img/award-icon.png" type="image/png">
+                                        <img src="img/award-icon.png" alt="Знаток Business" class="award-icon">
+                                    </picture>
+                                </div>
+                                <div class="profile__awards-name">
+                                    Сделка
+                                    за день
+                                </div>
+                                <div class="profile__awards-count">12</div>
+                            </div>
+                            <div class="profile__awards-item">
+                                <div class="profile__awards-icon">
+                                    <picture>
+                                        <source srcset="img/award-icon.webp" type="image/webp">
+                                        <source srcset="img/award-icon.png" type="image/png">
+                                        <img src="img/award-icon.png" alt="Знаток Business" class="award-icon">
+                                    </picture>
+                                </div>
+                                <div class="profile__awards-name">
+                                    Сделка
+                                    за день
+                                </div>
+                                <div class="profile__awards-count">12</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile__reviews">
+                        <div class="profile__title">Отзывы<span class="profile__reviews-count">11</span></div>
+                    </div>
+                </div>
+                <div class="profile"></div>
+            </div>
+        </div>
+    </div>
+    </div>
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/libs.js"></script>
+    <script src="js/lightgallery.min.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 
